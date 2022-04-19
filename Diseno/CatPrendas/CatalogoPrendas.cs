@@ -45,7 +45,8 @@ namespace ALTIMA_ERP_2022.Diseno.CatPrendas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            Close();
+            Dispose();
         }
 
     }

@@ -61,7 +61,6 @@
     <Compile Include="Diseno\EForros.cs" />
     <Compile Include="Diseno\EForrosComposiciones.cs" />
     <Compile Include="Diseno\EForrosEncogimiento.cs" />
-    <Compile Include="Diseno\EForrosLavado.cs" />
     <Compile Include="Diseno\EInstruccionesCuidado.cs" />
     <Compile Include="Diseno\EMarcadores.cs" />
     <Compile Include="Diseno\EMateriales.cs" />

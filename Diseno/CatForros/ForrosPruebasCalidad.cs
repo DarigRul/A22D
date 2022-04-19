@@ -136,11 +136,6 @@ namespace ALTIMA_ERP_2022.Diseno.CatForros
                     cmbOperarioEncogimiento.SelectedValue = enc.id_operario;
                     cmbTelaEncogimiento.SelectedValue = enc.id_entretela; 
                 }
-
-
-
-
-
             }
             catch (Exception ex)
             {
