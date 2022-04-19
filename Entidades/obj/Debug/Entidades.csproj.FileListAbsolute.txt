@@ -10,3 +10,9 @@ C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.ca
 C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.dll
 C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.pdb
+D:\Desarrollos\A22D\Entidades\bin\Debug\Entidades.dll
+D:\Desarrollos\A22D\Entidades\bin\Debug\Entidades.pdb
+D:\Desarrollos\A22D\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+D:\Desarrollos\A22D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\Desarrollos\A22D\Entidades\obj\Debug\Entidades.dll
+D:\Desarrollos\A22D\Entidades\obj\Debug\Entidades.pdb
