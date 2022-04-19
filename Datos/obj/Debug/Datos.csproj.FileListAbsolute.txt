@@ -24,3 +24,16 @@ C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.dll
 C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.pdb
+D:\Desarrollos\A22D\Datos\bin\Debug\Datos.dll
+D:\Desarrollos\A22D\Datos\bin\Debug\Datos.pdb
+D:\Desarrollos\A22D\Datos\bin\Debug\Entidades.dll
+D:\Desarrollos\A22D\Datos\bin\Debug\FluentFTP.dll
+D:\Desarrollos\A22D\Datos\bin\Debug\Renci.SshNet.dll
+D:\Desarrollos\A22D\Datos\bin\Debug\Entidades.pdb
+D:\Desarrollos\A22D\Datos\bin\Debug\FluentFTP.xml
+D:\Desarrollos\A22D\Datos\bin\Debug\Renci.SshNet.xml
+D:\Desarrollos\A22D\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+D:\Desarrollos\A22D\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\Desarrollos\A22D\Datos\obj\Debug\Datos.csproj.CopyComplete
+D:\Desarrollos\A22D\Datos\obj\Debug\Datos.dll
+D:\Desarrollos\A22D\Datos\obj\Debug\Datos.pdb
