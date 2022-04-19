@@ -1,0 +1,107 @@
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\ALTIMA ERP 2022.exe.config
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\ALTIMA ERP 2022.exe
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\ALTIMA ERP 2022.pdb
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\AxShockwaveFlashObjects.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.Shared.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Datos.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\DevComponents.Instrumentation.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Entidades.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Newtonsoft.Json.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Renci.SshNet.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\ShockwaveFlashObjects.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\stdole.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Datos.pdb
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Entidades.pdb
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\DevComponents.Instrumentation.xml
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Newtonsoft.Json.xml
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\bin\Debug\Renci.SshNet.xml
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA ERP 2022.csproj.AssemblyReference.cache
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA ERP 2022.csproj.SuggestedBindingRedirects.cache
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Comercial.Muestrario.CatalogoMuestrario.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Comercial.Precios.CatalogoPreciosFamiliaComposicion.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Comercial.Precios.PreciosPorFamiliaAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Compras.CatProveedores.CatalogoProveedores.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatColores.CatalogoColores.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatColores.ColorAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatComposiciones.CatComposiciones.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatComposiciones.ComposicionesAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatFamiliaComposicion.CatalogoFamiliaComposicion.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatFamiliaComposicion.FamiliaComposicionAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatFamiliaGenero.CatalogoFamiliaGenero.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatFamiliaGenero.FamliaGeneroAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatFamiliaPrendas.CatalogoFamiliaPrendas.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatFamiliaPrendas.FamiliaPrendas.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatForros.CatForros.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatForros.ForrosAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatInstruccionesCuidado.CatInstruccionesCuidado.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatInstruccionesCuidado.InstruccionesCuidadoAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatMarcadores.CatalogoMarcadores.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatMarcadores.Marcadores.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatMaterial.CatalogoMaterial.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatMaterial.CatalogoMaterialAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatPrendas.CatalogoPrendas.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatPrendas.PrendasAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatTelas.CatalogTelas.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatTelas.Telas.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatPiezasTrazo.CatPiezasTrazo.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatPiezasTrazo.PiezasTrazoAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatTipoMaterial.CatTipoMaterial.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatTipoMaterial.CatTipoMaterialAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatUnidadesMedida.CatalogoUnidadesMedida.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatUnidadesMedida.UnidadesAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.Produccion.CatRutasProduccion.CatalogoRutasProduccion.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.Produccion.CatRutasProduccion.RutasProduccionAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.Produccion.ProcesosProduccion.CatalogoProcesosProduccion.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.Produccion.ProcesosProduccion.ProcesosProduccionAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.CatalogoMuestrario.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Login.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.LoginT.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Main.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Notificaciones.NotificacionDetalle.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Notificaciones.Notificaciones.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Produccion.CatLargos.CatalogoLargos.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Produccion.CatLargos.LargosAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Produccion.CatTallas.CatTallas.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Produccion.CatTallas.TallasAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Properties.Resources.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Reportes.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Usuarios.CatalogoUsuarios.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Usuarios.CatalogoUsuariosAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Usuarios.frmLogin.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Usuarios.Permisos.CatalogoRolesPermisos.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Usuarios.Permisos.CatologoPermisosAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Usuarios.Roles.CatalogoRoles.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Usuarios.Roles.CatalogoRolesAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Utilitarios.Historico.Historico.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA ERP 2022.csproj.GenerateResource.cache
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA ERP 2022.csproj.CoreCompileInputs.cache
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA ERP 2022.csproj.CopyComplete
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA ERP 2022.exe
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA ERP 2022.pdb
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Compras.CatProveedores.ProveedoresAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Compras.CatProveedores.ProveedorContactosAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatForros.ForrosPruebasCalidad.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Produccion.CatMaquileros.CatalogoMaquileros.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Produccion.CatMaquileros.MaquilerosAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatEnsambles.CatalogoEnsables.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatEnsambles.CatalogoEnsablesAM.resources
+D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\obj\Debug\ALTIMA_ERP_2022.Diseno.CatFamiliaPrendas.CatalogoFamiliaPrendasEnsambles.resources

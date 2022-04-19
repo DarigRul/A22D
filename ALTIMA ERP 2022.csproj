@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F616B548-D675-4C68-B867-68B1F67B69BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ALTIMA_ERP_2022</RootNamespace>
+    <AssemblyName>ALTIMA ERP 2022</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=14.1.0.37, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2020.0.1\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comercial\Muestrario\CatalogoMuestrario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\Muestrario\CatalogoMuestrario.Designer.cs">
+      <DependentUpon>CatalogoMuestrario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\Precios\CatalogoPreciosFamiliaComposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\Precios\CatalogoPreciosFamiliaComposicion.Designer.cs">
+      <DependentUpon>CatalogoPreciosFamiliaComposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\Precios\PreciosPorFamiliaAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\Precios\PreciosPorFamiliaAM.Designer.cs">
+      <DependentUpon>PreciosPorFamiliaAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\CatProveedores\CatalogoProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\CatProveedores\CatalogoProveedores.Designer.cs">
+      <DependentUpon>CatalogoProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\CatProveedores\ProveedorContactosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\CatProveedores\ProveedorContactosAM.Designer.cs">
+      <DependentUpon>ProveedorContactosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\CatProveedores\ProveedoresAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\CatProveedores\ProveedoresAM.Designer.cs">
+      <DependentUpon>ProveedoresAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatColores\CatalogoColores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatColores\CatalogoColores.Designer.cs">
+      <DependentUpon>CatalogoColores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatColores\ColorAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatColores\ColorAM.Designer.cs">
+      <DependentUpon>ColorAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatComposiciones\CatComposiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatComposiciones\CatComposiciones.Designer.cs">
+      <DependentUpon>CatComposiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatComposiciones\ComposicionesAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatComposiciones\ComposicionesAM.Designer.cs">
+      <DependentUpon>ComposicionesAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatEnsambles\CatalogoEnsables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatEnsambles\CatalogoEnsables.designer.cs">
+      <DependentUpon>CatalogoEnsables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatEnsambles\CatalogoEnsablesAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatEnsambles\CatalogoEnsablesAM.designer.cs">
+      <DependentUpon>CatalogoEnsablesAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaComposicion\CatalogoFamiliaComposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaComposicion\CatalogoFamiliaComposicion.Designer.cs">
+      <DependentUpon>CatalogoFamiliaComposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaComposicion\FamiliaComposicionAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaComposicion\FamiliaComposicionAM.Designer.cs">
+      <DependentUpon>FamiliaComposicionAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaGenero\CatalogoFamiliaGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaGenero\CatalogoFamiliaGenero.Designer.cs">
+      <DependentUpon>CatalogoFamiliaGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaGenero\FamliaGeneroAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaGenero\FamliaGeneroAM.Designer.cs">
+      <DependentUpon>FamliaGeneroAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaPrendas\CatalogoFamiliaPrendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaPrendas\CatalogoFamiliaPrendas.designer.cs">
+      <DependentUpon>CatalogoFamiliaPrendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaPrendas\CatalogoFamiliaPrendasEnsambles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaPrendas\CatalogoFamiliaPrendasEnsambles.designer.cs">
+      <DependentUpon>CatalogoFamiliaPrendasEnsambles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaPrendas\FamiliaPrendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatFamiliaPrendas\FamiliaPrendas.designer.cs">
+      <DependentUpon>FamiliaPrendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatForros\CatForros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatForros\CatForros.Designer.cs">
+      <DependentUpon>CatForros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatForros\ForrosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatForros\ForrosAM.Designer.cs">
+      <DependentUpon>ForrosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatForros\ForrosPruebasCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatForros\ForrosPruebasCalidad.Designer.cs">
+      <DependentUpon>ForrosPruebasCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatInstruccionesCuidado\CatInstruccionesCuidado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatInstruccionesCuidado\CatInstruccionesCuidado.designer.cs">
+      <DependentUpon>CatInstruccionesCuidado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatInstruccionesCuidado\InstruccionesCuidadoAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatInstruccionesCuidado\InstruccionesCuidadoAM.designer.cs">
+      <DependentUpon>InstruccionesCuidadoAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatMarcadores\CatalogoMarcadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatMarcadores\CatalogoMarcadores.designer.cs">
+      <DependentUpon>CatalogoMarcadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatMarcadores\Marcadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatMarcadores\Marcadores.designer.cs">
+      <DependentUpon>Marcadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatMaterial\CatalogoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatMaterial\CatalogoMaterial.designer.cs">
+      <DependentUpon>CatalogoMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatMaterial\CatalogoMaterialAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatMaterial\CatalogoMaterialAM.designer.cs">
+      <DependentUpon>CatalogoMaterialAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatPrendas\CatalogoPrendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatPrendas\CatalogoPrendas.Designer.cs">
+      <DependentUpon>CatalogoPrendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatPrendas\PrendasAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatPrendas\PrendasAM.Designer.cs">
+      <DependentUpon>PrendasAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\CatalogoTelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\CatalogoTelas.Designer.cs">
+      <DependentUpon>CatalogoTelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\Telas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\Telas.Designer.cs">
+      <DependentUpon>Telas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatPiezasTrazo\CatPiezasTrazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatPiezasTrazo\CatPiezasTrazo.Designer.cs">
+      <DependentUpon>CatPiezasTrazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatPiezasTrazo\PiezasTrazoAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatPiezasTrazo\PiezasTrazoAM.Designer.cs">
+      <DependentUpon>PiezasTrazoAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatTipoMaterial\CatTipoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatTipoMaterial\CatTipoMaterial.designer.cs">
+      <DependentUpon>CatTipoMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatTipoMaterial\CatTipoMaterialAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatTipoMaterial\CatTipoMaterialAM.designer.cs">
+      <DependentUpon>CatTipoMaterialAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatUnidadesMedida\CatalogoUnidadesMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatUnidadesMedida\CatalogoUnidadesMedida.Designer.cs">
+      <DependentUpon>CatalogoUnidadesMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatUnidadesMedida\UnidadesAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatUnidadesMedida\UnidadesAM.Designer.cs">
+      <DependentUpon>UnidadesAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\Produccion\CatRutasProduccion\CatalogoRutasProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\Produccion\CatRutasProduccion\CatalogoRutasProduccion.designer.cs">
+      <DependentUpon>CatalogoRutasProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\Produccion\CatRutasProduccion\RutasProduccionAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\Produccion\CatRutasProduccion\RutasProduccionAM.designer.cs">
+      <DependentUpon>RutasProduccionAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\Produccion\ProcesosProduccion\CatalogoProcesosProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\Produccion\ProcesosProduccion\CatalogoProcesosProduccion.designer.cs">
+      <DependentUpon>CatalogoProcesosProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\Produccion\ProcesosProduccion\ProcesosProduccionAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\Produccion\ProcesosProduccion\ProcesosProduccionAM.designer.cs">
+      <DependentUpon>ProcesosProduccionAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginT.designer.cs">
+      <DependentUpon>LoginT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones\NotificacionDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\NotificacionDetalle.Designer.cs">
+      <DependentUpon>NotificacionDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones\Notificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\Notificaciones.Designer.cs">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\CatLargos\CatalogoLargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\CatLargos\CatalogoLargos.Designer.cs">
+      <DependentUpon>CatalogoLargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\CatLargos\LargosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\CatLargos\LargosAM.Designer.cs">
+      <DependentUpon>LargosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\CatMaquileros\CatalogoMaquileros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\CatMaquileros\CatalogoMaquileros.designer.cs">
+      <DependentUpon>CatalogoMaquileros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\CatMaquileros\MaquilerosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\CatMaquileros\MaquilerosAM.designer.cs">
+      <DependentUpon>MaquilerosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\CatTallas\CatTallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\CatTallas\CatTallas.Designer.cs">
+      <DependentUpon>CatTallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\CatTallas\TallasAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\CatTallas\TallasAM.Designer.cs">
+      <DependentUpon>TallasAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\CatalogoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\CatalogoUsuarios.designer.cs">
+      <DependentUpon>CatalogoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\CatalogoUsuariosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\CatalogoUsuariosAM.designer.cs">
+      <DependentUpon>CatalogoUsuariosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Permisos\CatalogoRolesPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Permisos\CatalogoRolesPermisos.designer.cs">
+      <DependentUpon>CatalogoRolesPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Permisos\CatologoPermisosAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Permisos\CatologoPermisosAM.designer.cs">
+      <DependentUpon>CatologoPermisosAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Roles\CatalogoRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Roles\CatalogoRoles.designer.cs">
+      <DependentUpon>CatalogoRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Roles\CatalogoRolesAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Roles\CatalogoRolesAM.designer.cs">
+      <DependentUpon>CatalogoRolesAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilitarios\ConfiguracionGlobal.cs" />
+    <Compile Include="Utilitarios\ftp.cs" />
+    <Compile Include="Utilitarios\Historico\Historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilitarios\Historico\Historico.Designer.cs">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilitarios\SuperGridAnidadoConfiguracion.cs" />
+    <Compile Include="Utilitarios\supergridToDataTable.cs" />
+    <EmbeddedResource Include="Comercial\Muestrario\CatalogoMuestrario.resx">
+      <DependentUpon>CatalogoMuestrario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\Precios\CatalogoPreciosFamiliaComposicion.resx">
+      <DependentUpon>CatalogoPreciosFamiliaComposicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\Precios\PreciosPorFamiliaAM.resx">
+      <DependentUpon>PreciosPorFamiliaAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\CatProveedores\CatalogoProveedores.resx">
+      <DependentUpon>CatalogoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\CatProveedores\ProveedorContactosAM.resx">
+      <DependentUpon>ProveedorContactosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\CatProveedores\ProveedoresAM.resx">
+      <DependentUpon>ProveedoresAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatColores\CatalogoColores.resx">
+      <DependentUpon>CatalogoColores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatColores\ColorAM.resx">
+      <DependentUpon>ColorAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatComposiciones\CatComposiciones.resx">
+      <DependentUpon>CatComposiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatComposiciones\ComposicionesAM.resx">
+      <DependentUpon>ComposicionesAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatEnsambles\CatalogoEnsables.resx">
+      <DependentUpon>CatalogoEnsables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatEnsambles\CatalogoEnsablesAM.resx">
+      <DependentUpon>CatalogoEnsablesAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatFamiliaComposicion\CatalogoFamiliaComposicion.resx">
+      <DependentUpon>CatalogoFamiliaComposicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatFamiliaComposicion\FamiliaComposicionAM.resx">
+      <DependentUpon>FamiliaComposicionAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatFamiliaGenero\CatalogoFamiliaGenero.resx">
+      <DependentUpon>CatalogoFamiliaGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatFamiliaGenero\FamliaGeneroAM.resx">
+      <DependentUpon>FamliaGeneroAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatFamiliaPrendas\CatalogoFamiliaPrendas.resx">
+      <DependentUpon>CatalogoFamiliaPrendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatFamiliaPrendas\CatalogoFamiliaPrendasEnsambles.resx">
+      <DependentUpon>CatalogoFamiliaPrendasEnsambles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatFamiliaPrendas\FamiliaPrendas.resx">
+      <DependentUpon>FamiliaPrendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatForros\CatForros.resx">
+      <DependentUpon>CatForros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatForros\ForrosAM.resx">
+      <DependentUpon>ForrosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatForros\ForrosPruebasCalidad.resx">
+      <DependentUpon>ForrosPruebasCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatInstruccionesCuidado\CatInstruccionesCuidado.resx">
+      <DependentUpon>CatInstruccionesCuidado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatInstruccionesCuidado\InstruccionesCuidadoAM.resx">
+      <DependentUpon>InstruccionesCuidadoAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatMarcadores\CatalogoMarcadores.resx">
+      <DependentUpon>CatalogoMarcadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatMarcadores\Marcadores.resx">
+      <DependentUpon>Marcadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatMaterial\CatalogoMaterial.resx">
+      <DependentUpon>CatalogoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatMaterial\CatalogoMaterialAM.resx">
+      <DependentUpon>CatalogoMaterialAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatPrendas\CatalogoPrendas.resx">
+      <DependentUpon>CatalogoPrendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatPrendas\PrendasAM.resx">
+      <DependentUpon>PrendasAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatTelas\CatalogoTelas.resx">
+      <DependentUpon>CatalogoTelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatTelas\Telas.resx">
+      <DependentUpon>Telas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatPiezasTrazo\CatPiezasTrazo.resx">
+      <DependentUpon>CatPiezasTrazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatPiezasTrazo\PiezasTrazoAM.resx">
+      <DependentUpon>PiezasTrazoAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatTipoMaterial\CatTipoMaterial.resx">
+      <DependentUpon>CatTipoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatTipoMaterial\CatTipoMaterialAM.resx">
+      <DependentUpon>CatTipoMaterialAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatUnidadesMedida\CatalogoUnidadesMedida.resx">
+      <DependentUpon>CatalogoUnidadesMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatUnidadesMedida\UnidadesAM.resx">
+      <DependentUpon>UnidadesAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\Produccion\CatRutasProduccion\CatalogoRutasProduccion.resx">
+      <DependentUpon>CatalogoRutasProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\Produccion\CatRutasProduccion\RutasProduccionAM.resx">
+      <DependentUpon>RutasProduccionAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\Produccion\ProcesosProduccion\CatalogoProcesosProduccion.resx">
+      <DependentUpon>CatalogoProcesosProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\Produccion\ProcesosProduccion\ProcesosProduccionAM.resx">
+      <DependentUpon>ProcesosProduccionAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginT.resx">
+      <DependentUpon>LoginT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificaciones\NotificacionDetalle.resx">
+      <DependentUpon>NotificacionDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificaciones\Notificaciones.resx">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\CatLargos\CatalogoLargos.resx">
+      <DependentUpon>CatalogoLargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\CatLargos\LargosAM.resx">
+      <DependentUpon>LargosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\CatMaquileros\CatalogoMaquileros.resx">
+      <DependentUpon>CatalogoMaquileros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\CatMaquileros\MaquilerosAM.resx">
+      <DependentUpon>MaquilerosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\CatTallas\CatTallas.resx">
+      <DependentUpon>CatTallas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\CatTallas\TallasAM.resx">
+      <DependentUpon>TallasAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\CatalogoUsuarios.resx">
+      <DependentUpon>CatalogoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\CatalogoUsuariosAM.resx">
+      <DependentUpon>CatalogoUsuariosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Permisos\CatalogoRolesPermisos.resx">
+      <DependentUpon>CatalogoRolesPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Permisos\CatologoPermisosAM.resx">
+      <DependentUpon>CatologoPermisosAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Roles\CatalogoRoles.resx">
+      <DependentUpon>CatalogoRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Roles\CatalogoRolesAM.resx">
+      <DependentUpon>CatalogoRolesAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilitarios\Historico\Historico.resx">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Datos\Datos.csproj">
+      <Project>{196e8def-266f-41d9-9443-ec22a228ef54}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="Entidades\Entidades.csproj">
+      <Project>{9dcd1ac6-8e80-4f1e-9be9-d87fe7352f5d}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AMP\" />
+    <Folder Include="Diseno\CatPrecioFamiliaComposicion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Login-Altima-ERP-2022.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produccion_muestras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unidades_medida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piezas_trazo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instrucciones_cuidado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia_prendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia_genero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia_composicion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\composiciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\precio_familia_composicion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcadores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_material.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comercial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diseño.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desactivar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\permisos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\importar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Materiales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen_cargar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen_borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notificaciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historico1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tallas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\largo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rutas_produccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procesos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoAltima150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contactos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altima_blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pruebas_calidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\importante.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

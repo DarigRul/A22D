@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALTIMA ERP 2022", "ALTIMA ERP 2022.csproj", "{F616B548-D675-4C68-B867-68B1F67B69BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{196E8DEF-266F-41D9-9443-EC22A228EF54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{9DCD1AC6-8E80-4F1E-9BE9-D87FE7352F5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F616B548-D675-4C68-B867-68B1F67B69BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F616B548-D675-4C68-B867-68B1F67B69BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F616B548-D675-4C68-B867-68B1F67B69BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F616B548-D675-4C68-B867-68B1F67B69BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{196E8DEF-266F-41D9-9443-EC22A228EF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{196E8DEF-266F-41D9-9443-EC22A228EF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{196E8DEF-266F-41D9-9443-EC22A228EF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{196E8DEF-266F-41D9-9443-EC22A228EF54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DCD1AC6-8E80-4F1E-9BE9-D87FE7352F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DCD1AC6-8E80-4F1E-9BE9-D87FE7352F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DCD1AC6-8E80-4F1E-9BE9-D87FE7352F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DCD1AC6-8E80-4F1E-9BE9-D87FE7352F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B55DE2A1-1184-4740-BDAF-D5987301B2FF}
+	EndGlobalSection
+EndGlobal

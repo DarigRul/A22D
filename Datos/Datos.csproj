@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{196E8DEF-266F-41D9-9443-EC22A228EF54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentFTP, Version=37.0.2.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentFTP.37.0.2\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2020.0.1\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comercial\DPreciosfamiliacomposicion.cs" />
+    <Compile Include="Compras\DProveedor.cs" />
+    <Compile Include="Compras\DProveedorContacto.cs" />
+    <Compile Include="DConexion.cs" />
+    <Compile Include="Diseno\DColor.cs" />
+    <Compile Include="Diseno\DComposicion.cs" />
+    <Compile Include="Diseno\DEnsambles.cs" />
+    <Compile Include="Diseno\DFamiliaComposicion.cs" />
+    <Compile Include="Diseno\DFamiliaGenero.cs" />
+    <Compile Include="Diseno\DFamiliaPrendas.cs" />
+    <Compile Include="Diseno\DForros.cs" />
+    <Compile Include="Diseno\DForrosEncogimiento.cs" />
+    <Compile Include="Diseno\DInstruccionesCuidado.cs" />
+    <Compile Include="Diseno\DMarcadores.cs" />
+    <Compile Include="Diseno\DMateriales.cs" />
+    <Compile Include="Diseno\DMaterialesProcesos.cs" />
+    <Compile Include="Diseno\DMaterialTipo.cs" />
+    <Compile Include="Diseno\DTelas.cs" />
+    <Compile Include="Diseno\DPiezasTrazo.cs" />
+    <Compile Include="Diseno\DProcesos.cs" />
+    <Compile Include="Diseno\DRutasProduccion.cs" />
+    <Compile Include="Diseno\DUnidadesMedida.cs" />
+    <Compile Include="Notificaciones\DNotificaciones.cs" />
+    <Compile Include="Produccion\DLargos.cs" />
+    <Compile Include="Produccion\DMaquileros.cs" />
+    <Compile Include="Produccion\DTallas.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios\DPermiso.cs" />
+    <Compile Include="Usuarios\DRol.cs" />
+    <Compile Include="Usuarios\DUsuario.cs" />
+    <Compile Include="Utilitarios\DProcesosInicio.cs" />
+    <Compile Include="Utilitarios\Historico\DHistorico.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{9dcd1ac6-8e80-4f1e-9be9-d87fe7352f5d}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AMP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
