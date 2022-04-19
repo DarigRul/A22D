@@ -47,8 +47,6 @@ namespace ALTIMA_ERP_2022.Diseno.CatPrendas
         {
             Close();
             Dispose();
-
-            //ALV
         }
 
     }
