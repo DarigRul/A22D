@@ -17,7 +17,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
     public partial class CatalogTelas: OfficeForm
     {
         private GridPanel panel;
-        private List<ETelas> lstMarcadores = new List<ETelas>();
+        private List<ETelas> lstTelas = new List<ETelas>();
 
         public CatalogTelas()
         {
@@ -25,27 +25,24 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
             Cargarsgc();
         }
 
-        private void CatalogoMaterial_Load(object sender, EventArgs e)
+        private void CatalogoTela_Load(object sender, EventArgs e)
         {
             try
             {
-                //lstMarcadores = DTelas.GetConsultaDisenoMateriales();
-                //if (lstMarcadores != null)
-                //{
-                //    if (lstMarcadores.Count > 0)
-                //    {
-                //        panel = sgcMaterial.PrimaryGrid;
-                //        panel.DataSource = lstMarcadores;
-                //    }
-                //    else
-                //    {
-                //        MessageBoxEx.Show("Error, no existen registros.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //}
-                //else
-                //{
-                //    MessageBoxEx.Show("Error, no existen registros.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
+                lstTelas = DTelas.GetConsultaDisenoTelas();
+                if (lstTelas != null)
+                {
+                    if (lstTelas.Count > 0)
+                    {
+                        panel = sgcTelas.PrimaryGrid;
+                        panel.DataSource = lstTelas;
+                    }
+                   
+                }
+                else
+                {
+                    MessageBoxEx.Show("Error, no existen registros.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
@@ -57,23 +54,19 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
         {
             try
             {
-                //lstMarcadores = DTelas.GetConsultaDisenoMateriales();
-                //if (lstMarcadores != null)
-                //{
-                //    if (lstMarcadores.Count > 0)
-                //    {
-                //        panel = sgcMaterial.PrimaryGrid;
-                //        panel.DataSource = lstMarcadores;
-                //    }
-                //    else
-                //    {
-                //        MessageBoxEx.Show("Error, no existen registros.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //}
-                //else
-                //{
-                //    MessageBoxEx.Show("Error, no existen registros.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
+                lstTelas = DTelas.GetConsultaDisenoTelas();
+                if (lstTelas != null)
+                {
+                    if (lstTelas.Count > 0)
+                    {
+                        panel = sgcTelas.PrimaryGrid;
+                        panel.DataSource = lstTelas;
+                    }
+                }
+                else
+                {
+                    MessageBoxEx.Show("Error, no existen registros.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
@@ -84,40 +77,10 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
         {
             try
             {
+                //se llama ventana de telas para realizar el alta de registro
                 ETelas obj = new ETelas();
-                var row = panel.ActiveRow as GridRow;
-                int id_material = Convert.ToInt32(row["id_material"].Value);
-                int tipo = Convert.ToInt32(row["tipo"].Value);
-                int id_material_tipo = Convert.ToInt32(row["id_material_tipo"].Value);
-                int id_proveedor = Convert.ToInt32(row["id_proveedor"].Value);
-                int id_material_proceso = Convert.ToInt32(row["id_material_proceso"].Value);
-                int id_unidad_medida = Convert.ToInt32(row["id_unidad_medida"].Value);
-                string nombre = Convert.ToString(row["nombre"].Value);
-                int id_color = Convert.ToInt32(row["id_color"].Value);
-                string uso = Convert.ToString(row["uso"].Value);
-                string clave_proveedor = Convert.ToString(row["clave_proveedor"].Value);
-                decimal tamano = Convert.ToDecimal(row["tamano"].Value);
-                string observaciones = Convert.ToString(row["observaciones"].Value);
-                string imagen = Convert.ToString(row["imagen"].Value);
-                int hacer_prueba_calidad = Convert.ToInt32(row["hacer_prueba_calidad"].Value);
-                decimal precio_unitario = Convert.ToDecimal(row["precio_unitario"].Value);
-                //obj.id_material = id_material;
-                //obj.tipo = tipo;
-                //obj.id_material_tipo = id_material_tipo;
-                //obj.id_proveedor = id_proveedor;
-                //obj.id_material_proceso = id_material_proceso;
-                //obj.id_unidad_medida = id_unidad_medida;
-                //obj.nombre = nombre;
-                //obj.id_color = id_color;
-                //obj.uso = uso;
-                //obj.clave_proveedor = clave_proveedor;
-                //obj.tamano = tamano;
-                //obj.observaciones = observaciones;
-                //obj.imagen = imagen;
-                //obj.hacer_prueba_calidad = hacer_prueba_calidad;
-                //obj.precio_unitario = precio_unitario;
                 var nuevoGenero = new Telas(obj,"Alta");
-                nuevoGenero.refrescar += () => CatalogoMaterial_Load(this, EventArgs.Empty);
+                nuevoGenero.refrescar += () => CatalogoTela_Load(this, EventArgs.Empty);
                 nuevoGenero.ShowDialog();
             }
             catch (Exception)
@@ -130,41 +93,52 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
         {
             try
             {
+                //se obtiene el objeto seleccionado dentro del super grid
                 ETelas obj = new ETelas();
                 var row = panel.ActiveRow as GridRow;
-                int id_material = Convert.ToInt32(row["id_material"].Value);
+                int id_tela = Convert.ToInt32(row["id_tela"].Value);
                 int tipo = Convert.ToInt32(row["tipo"].Value);
-                int id_material_tipo = Convert.ToInt32(row["id_material_tipo"].Value);
+                string clave_tela = Convert.ToString(row["clave_tela"].Value);
+                string descripcion = Convert.ToString(row["descripcion"].Value);
+                int id_familia_composicion = Convert.ToInt32(row["id_familia_composicion"].Value);
+                int id_estampado = Convert.ToInt32(row["id_estampado"].Value);
                 int id_proveedor = Convert.ToInt32(row["id_proveedor"].Value);
-                int id_material_proceso = Convert.ToInt32(row["id_material_proceso"].Value);
-                int id_unidad_medida = Convert.ToInt32(row["id_unidad_medida"].Value);
-                string nombre = Convert.ToString(row["nombre"].Value);
-                int id_color = Convert.ToInt32(row["id_color"].Value);
-                string uso = Convert.ToString(row["uso"].Value);
                 string clave_proveedor = Convert.ToString(row["clave_proveedor"].Value);
-                decimal tamano = Convert.ToDecimal(row["tamano"].Value);
-                string observaciones = Convert.ToString(row["observaciones"].Value);
+                int id_color = Convert.ToInt32(row["id_color"].Value);
+                double ancho_tela = Convert.ToDouble(row["ancho_tela"].Value);
                 string imagen = Convert.ToString(row["imagen"].Value);
-                int hacer_prueba_calidad = Convert.ToInt32(row["hacer_prueba_calidad"].Value);
-                //decimal precio_unitario = Convert.ToDecimal(row["precio_unitario"].Value);
-                //obj.id_material = id_material;
-                //obj.tipo = tipo;
-                //obj.id_material_tipo = id_material_tipo;
-                //obj.id_proveedor = id_proveedor;
-                //obj.id_material_proceso = id_material_proceso;
-                //obj.id_unidad_medida = id_unidad_medida;
-                //obj.nombre = nombre;
-                //obj.id_color = id_color;
-                //obj.uso = uso;
-                //obj.clave_proveedor = clave_proveedor;
-                //obj.tamano = tamano;
-                //obj.observaciones = observaciones;
-                //obj.imagen = imagen;
-                //obj.hacer_prueba_calidad = hacer_prueba_calidad;
-                //obj.precio_unitario = precio_unitario;
-                var nuevoGenero = new Telas(obj, "Modificacion");
-                nuevoGenero.refrescar += () => CatalogoMaterial_Load(this, EventArgs.Empty);
-                nuevoGenero.ShowDialog();
+                string observaciones = Convert.ToString(row["observaciones"].Value);
+                int estatus = Convert.ToInt32(row["estatus"].Value);
+                int estatus_tela = Convert.ToInt32(row["estatus_tela"].Value);
+                double prueba_encogimiento_largo = Convert.ToDouble(row["prueba_encogimiento_largo"].Value);
+                double prueba_encogimiento_ancho = Convert.ToDouble(row["prueba_encogimiento_ancho"].Value);
+                obj.id_tela = id_tela;
+                obj.tipo = tipo;
+                obj.clave_tela = clave_tela;
+                obj.descripcion = descripcion;
+                obj.id_familia_composicion = id_familia_composicion;
+                obj.id_estampado = id_estampado;
+                obj.id_proveedor = id_proveedor;
+                obj.clave_proveedor = clave_proveedor;
+                obj.id_color = id_color;
+                obj.ancho_tela = ancho_tela;
+                obj.imagen = imagen;
+                obj.observaciones = observaciones;
+                obj.estatus = estatus;
+                obj.estatus_tela = estatus_tela;
+                obj.prueba_encogimiento_largo = prueba_encogimiento_largo;
+                obj.prueba_encogimiento_ancho = prueba_encogimiento_ancho;
+                //se manda el objeto a la ventana de telas para despúes visualizar en pantalla los valores previos
+                if (obj.estatus == 1)
+                {
+                    var ventanatelas = new Telas(obj, "Modificacion");
+                    ventanatelas.refrescar += () => CatalogoTela_Load(this, EventArgs.Empty);
+                    ventanatelas.ShowDialog();
+                }
+                else
+                {
+                    MessageBoxEx.Show("Error, el registro no se puede actualizar.", "Error, la tela esta desactivada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
@@ -174,87 +148,108 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
 
         private void btnActivar_Click(object sender, EventArgs e)
         {
-            //Preguntamos al usuario si quiere activar el material
-            DialogResult dr = MessageBoxEx.Show("Se activará el registro de materiales, ¿Está seguro?", "Activar material", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (panel != null)
             {
-                try
-                { 
-                    //Obtenemos el id_material
-                    var row = panel.ActiveRow as GridRow;
-                    int id_material = Convert.ToInt32(row["id_material"].Value);
-                    int tipo = Convert.ToInt32(row["tipo"].Value);
-                    int id_material_tipo = Convert.ToInt32(row["id_material_tipo"].Value);
-                    int id_proveedor = Convert.ToInt32(row["id_proveedor"].Value);
-                    int id_material_proceso = Convert.ToInt32(row["id_material_proceso"].Value);
-                    int id_unidad_medida = Convert.ToInt32(row["id_unidad_medida"].Value);
-                    string nombre = Convert.ToString(row["nombre"].Value);
-                    int id_color = Convert.ToInt32(row["id_color"].Value);
-                    string uso = Convert.ToString(row["uso"].Value);
-                    string clave_proveedor = Convert.ToString(row["clave_proveedor"].Value);
-                    decimal tamano = Convert.ToDecimal(row["tamano"].Value);
-                    string  observaciones = Convert.ToString(row["observaciones"].Value);
-                    string imagen = Convert.ToString(row["imagen"].Value);
-                    int hacer_prueba_calidad = Convert.ToInt32(row["hacer_prueba_calidad"].Value);
-                    decimal precio_unitario = Convert.ToDecimal(row["precio_unitario"].Value);
-                    //metodo para habilitar material
-                    DTelas.SetHabilitarDeshabilitarMateriales(id_material, 1);
-                    DHistorico.RegistraHistorico("Diseño", "Catálogo de materiales", "Activar material", "", id_material + "/" + tipo + "/" + id_material_tipo + "/" + id_proveedor + "/" + id_material_proceso + "/" +
-                         id_unidad_medida + "/" + nombre + "/" + id_color + "/" + uso + "/" + clave_proveedor + "/" + tamano + "/" + observaciones + "/" + imagen + "/" + hacer_prueba_calidad + "/" + precio_unitario);
-                    CatalogoMaterial_Load(this, EventArgs.Empty);
-                }
-                catch (Exception)
+                //Preguntamos al usuario si quiere activar el telas
+                DialogResult dr = MessageBoxEx.Show("Se activará el registro de telas, ¿Está seguro?", "Activar tela", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
                 {
-                    MessageBoxEx.Show("Error, ocurrio un error insesperado intente nuevamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    { 
+                        //Obtenemos el  id_tela para despues procesar la activacion del regisro de telas
+                        var row = panel.ActiveRow as GridRow;
+                        int id_tela = Convert.ToInt32(row["id_tela"].Value);
+                        int tipo = Convert.ToInt32(row["tipo"].Value);
+                        string clave_tela = Convert.ToString(row["clave_tela"].Value);
+                        string descripcion = Convert.ToString(row["descripcion"].Value);
+                        int id_familia_composicion = Convert.ToInt32(row["id_familia_composicion"].Value);
+                        int id_estampado = Convert.ToInt32(row["id_estampado"].Value);
+                        int id_proveedor = Convert.ToInt32(row["id_proveedor"].Value);
+                        string clave_proveedor = Convert.ToString(row["clave_proveedor"].Value);
+                        int id_color = Convert.ToInt32(row["id_color"].Value);
+                        double ancho_tela = Convert.ToDouble(row["ancho_tela"].Value);
+                        string imagen = Convert.ToString(row["imagen"].Value);
+                        string  observaciones = Convert.ToString(row["observaciones"].Value);
+                        int estatus = Convert.ToInt32(row["estatus"].Value);
+                        int estatus_tela = Convert.ToInt32(row["estatus_tela"].Value);
+                        double prueba_encogimiento_largo = Convert.ToDouble(row["prueba_encogimiento_largo"].Value);
+                        double prueba_encogimiento_ancho = Convert.ToDouble(row["prueba_encogimiento_ancho"].Value);
+                        //metodo para habilitar tela
+                        DTelas.SetHabilitarDeshabilitarTelas(id_tela, 1);
+                        DHistorico.RegistraHistorico("Diseño", "Catálogo de telas", "Activar tela", "", id_tela + "/" + tipo + "/" + clave_tela + 
+                            "/" + descripcion + "/" + id_familia_composicion + "/" +
+                             id_estampado + "/" + id_proveedor + "/" + clave_proveedor + "/" + id_color + "/" + ancho_tela+ "/" + imagen + "/" + 
+                             observaciones + "/" + estatus + "/" + estatus_tela + "/" + prueba_encogimiento_largo + "/" +prueba_encogimiento_ancho);
+                        CatalogoTela_Load(this, EventArgs.Empty);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBoxEx.Show("Error, ocurrio un error inesperado intente nuevamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+            }
+            else
+            {
+                MessageBoxEx.Show("Error, seleccione algun valor.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnDesactivar_Click(object sender, EventArgs e)
         {
-            //Preguntamos al usuario si quiere desactivar el material
-            DialogResult dr = MessageBoxEx.Show("Se desactivará el registro de materiales, ¿Está seguro?", "Desactivar material", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (panel != null)
             {
-                try
-                { 
-
-                    //Obtenemos el id_material
-                    var row = panel.ActiveRow as GridRow;
-                    int id_material = Convert.ToInt32(row["id_material"].Value);
-                    int tipo = Convert.ToInt32(row["tipo"].Value);
-                    int id_material_tipo = Convert.ToInt32(row["id_material_tipo"].Value);
-                    int id_proveedor = Convert.ToInt32(row["id_proveedor"].Value);
-                    int id_material_proceso = Convert.ToInt32(row["id_material_proceso"].Value);
-                    int id_unidad_medida = Convert.ToInt32(row["id_unidad_medida"].Value);
-                    string nombre = Convert.ToString(row["nombre"].Value);
-                    int id_color = Convert.ToInt32(row["id_color"].Value);
-                    string uso = Convert.ToString(row["uso"].Value);
-                    string clave_proveedor = Convert.ToString(row["clave_proveedor"].Value);
-                    decimal tamano = Convert.ToDecimal(row["tamano"].Value);
-                    string observaciones = Convert.ToString(row["observaciones"].Value);
-                    string imagen = Convert.ToString(row["imagen"].Value);
-                    int hacer_prueba_calidad = Convert.ToInt32(row["hacer_prueba_calidad"].Value);
-                    decimal precio_unitario = Convert.ToDecimal(row["precio_unitario"].Value);
-                    //metodo para deshabilitar material
-                    DTelas.SetHabilitarDeshabilitarMateriales(id_material, 0);
-                    DHistorico.RegistraHistorico("Diseño", "Catálogo de materiales", "Desactivar material", "", id_material + "/" + tipo + "/" + id_material_tipo + "/" + id_proveedor + "/" + id_material_proceso + "/" +
-                         id_unidad_medida + "/" + nombre + "/" + id_color + "/" + uso + "/" + clave_proveedor + "/" + tamano + "/" + observaciones + "/" + imagen + "/" + hacer_prueba_calidad + "/" + precio_unitario);
-                    CatalogoMaterial_Load(this, EventArgs.Empty);
-                }
-                catch (Exception)
+                //Preguntamos al usuario si quiere desactivar tela
+                DialogResult dr = MessageBoxEx.Show("Se desactivará el registro de tela, ¿Está seguro?", "Desactivar tela", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
                 {
-                    MessageBoxEx.Show("Error, ocurrio un error insesperado intente nuevamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+
+                        //Obtenemos el id_tela para posteriormente desactivar el registro
+                        var row = panel.ActiveRow as GridRow;
+                        int id_tela = Convert.ToInt32(row["id_tela"].Value);
+                        int tipo = Convert.ToInt32(row["tipo"].Value);
+                        string clave_tela = Convert.ToString(row["clave_tela"].Value);
+                        string descripcion = Convert.ToString(row["descripcion"].Value);
+                        int id_familia_composicion = Convert.ToInt32(row["id_familia_composicion"].Value);
+                        int id_estampado = Convert.ToInt32(row["id_estampado"].Value);
+                        int id_proveedor = Convert.ToInt32(row["id_proveedor"].Value);
+                        string clave_proveedor = Convert.ToString(row["clave_proveedor"].Value);
+                        int id_color = Convert.ToInt32(row["id_color"].Value);
+                        double ancho_tela = Convert.ToDouble(row["ancho_tela"].Value);
+                        string imagen = Convert.ToString(row["imagen"].Value);
+                        string observaciones = Convert.ToString(row["observaciones"].Value);
+                        int estatus = Convert.ToInt32(row["estatus"].Value);
+                        int estatus_tela = Convert.ToInt32(row["estatus_tela"].Value);
+                        double prueba_encogimiento_largo = Convert.ToDouble(row["prueba_encogimiento_largo"].Value);
+                        double prueba_encogimiento_ancho = Convert.ToDouble(row["prueba_encogimiento_ancho"].Value);
+                        //metodo para deshabilitar tela
+                        DTelas.SetHabilitarDeshabilitarTelas(id_tela, 0);
+                        DHistorico.RegistraHistorico("Diseño", "Catálogo de telas", "Desactivar tela", "", id_tela + "/" + tipo + "/" + clave_tela +
+                            "/" + descripcion + "/" + id_familia_composicion + "/" +
+                             id_estampado + "/" + id_proveedor + "/" + clave_proveedor + "/" + id_color + "/" + ancho_tela + "/" + imagen + "/" +
+                             observaciones + "/" + estatus + "/" + estatus_tela + "/" + prueba_encogimiento_largo + "/" + prueba_encogimiento_ancho);
+                        CatalogoTela_Load(this, EventArgs.Empty);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBoxEx.Show("Error, ocurrio un error insesperado intente nuevamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-            }
         }
+        else
+        {
+                MessageBoxEx.Show("Error, seleccione algun valor.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+         }
+    }
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
             try
             {
-                DHistorico.RegistraHistorico("Diseño", "Catálogo de materiales", "Procesar Reporte materiales", "", "");
-                Utilitarios.ConfiguracionGlobal.GeneraReporte(sgcMaterial, "catalogo_materiales");
+                //proceso para obtener el reporte de telas
+                DHistorico.RegistraHistorico("Diseño", "Catálogo de telas", "Procesar Reporte telas", "", "");
+                Utilitarios.ConfiguracionGlobal.GeneraReporte(sgcTelas, "catalogo_telas");
             }
             catch (Exception)
             {
@@ -268,7 +263,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
             Dispose();
         }
 
-        private void sgcMaterial_DataBindingComplete(object sender, GridDataBindingCompleteEventArgs e)
+        private void sgcTela_DataBindingComplete(object sender, GridDataBindingCompleteEventArgs e)
         {
             foreach (GridRow row in panel.Rows)
             {
@@ -296,7 +291,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
             }
         }
 
-        private void sgcMaterial_SelectionChanged(object sender, GridEventArgs e)
+        private void sgcTela_SelectionChanged(object sender, GridEventArgs e)
         {
             var row = panel.ActiveRow as GridRow;
             if (Estatus(row))
@@ -321,6 +316,12 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
             {
                 return false;
             }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            Close();
+            Dispose();
         }
     }
 }

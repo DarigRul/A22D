@@ -45,29 +45,29 @@
             this.btnReporte = new DevComponents.DotNetBar.ButtonItem();
             this.btnSalir = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.sgcMaterial = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.sgcTelas = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.id_tela = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.tipo = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.auxtipo = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.clave_tela = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.descripcion = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.id_familia_composicion = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.id_estampado = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.id_proveedor = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.clave_proveedor = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.id_color = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.auxid_familia_composicion = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.auxid_estampado = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.auxid_proveedor = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.clave_proveedor = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.id_color = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.auxid_color = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.nombre = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.uso = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.tamano = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.ancho_tela = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.observaciones = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.imagen = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.hacer_prueba_calidad = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.precio_unitario = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.prueba_encogimiento_largo = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.prueba_encogimiento_ancho = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.estatus = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.auxestatus = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.estatus_tela = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
@@ -100,9 +100,9 @@
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(0, 450);
+            this.dockSite4.Location = new System.Drawing.Point(0, 642);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(800, 0);
+            this.dockSite4.Size = new System.Drawing.Size(1284, 0);
             this.dockSite4.TabIndex = 3;
             this.dockSite4.TabStop = false;
             // 
@@ -111,9 +111,9 @@
             this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite1.Location = new System.Drawing.Point(0, 35);
+            this.dockSite1.Location = new System.Drawing.Point(0, 33);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(0, 415);
+            this.dockSite1.Size = new System.Drawing.Size(0, 609);
             this.dockSite1.TabIndex = 0;
             this.dockSite1.TabStop = false;
             // 
@@ -122,9 +122,9 @@
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(800, 35);
+            this.dockSite2.Location = new System.Drawing.Point(1284, 33);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 415);
+            this.dockSite2.Size = new System.Drawing.Size(0, 609);
             this.dockSite2.TabIndex = 1;
             this.dockSite2.TabStop = false;
             // 
@@ -132,9 +132,9 @@
             // 
             this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(0, 450);
+            this.dockSite8.Location = new System.Drawing.Point(0, 642);
             this.dockSite8.Name = "dockSite8";
-            this.dockSite8.Size = new System.Drawing.Size(800, 0);
+            this.dockSite8.Size = new System.Drawing.Size(1284, 0);
             this.dockSite8.TabIndex = 7;
             this.dockSite8.TabStop = false;
             // 
@@ -142,9 +142,9 @@
             // 
             this.dockSite5.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dockSite5.Location = new System.Drawing.Point(0, 35);
+            this.dockSite5.Location = new System.Drawing.Point(0, 33);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 415);
+            this.dockSite5.Size = new System.Drawing.Size(0, 609);
             this.dockSite5.TabIndex = 4;
             this.dockSite5.TabStop = false;
             // 
@@ -152,9 +152,9 @@
             // 
             this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite6.Location = new System.Drawing.Point(800, 35);
+            this.dockSite6.Location = new System.Drawing.Point(1284, 33);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 415);
+            this.dockSite6.Size = new System.Drawing.Size(0, 609);
             this.dockSite6.TabIndex = 5;
             this.dockSite6.TabStop = false;
             // 
@@ -165,7 +165,7 @@
             this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite7.Location = new System.Drawing.Point(0, 0);
             this.dockSite7.Name = "dockSite7";
-            this.dockSite7.Size = new System.Drawing.Size(800, 35);
+            this.dockSite7.Size = new System.Drawing.Size(1284, 33);
             this.dockSite7.TabIndex = 1;
             this.dockSite7.TabStop = false;
             // 
@@ -187,7 +187,7 @@
             this.btnSalir});
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(463, 35);
+            this.bar1.Size = new System.Drawing.Size(439, 33);
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
@@ -245,70 +245,68 @@
             this.btnSalir.ImageFixedSize = new System.Drawing.Size(24, 24);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // dockSite3
             // 
             this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite3.Location = new System.Drawing.Point(0, 35);
+            this.dockSite3.Location = new System.Drawing.Point(0, 33);
             this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(800, 0);
+            this.dockSite3.Size = new System.Drawing.Size(1284, 0);
             this.dockSite3.TabIndex = 2;
             this.dockSite3.TabStop = false;
             // 
-            // sgcMaterial
+            // sgcTelas
             // 
-            this.sgcMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sgcMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sgcMaterial.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.sgcMaterial.ForeColor = System.Drawing.Color.Black;
-            this.sgcMaterial.Location = new System.Drawing.Point(0, 35);
-            this.sgcMaterial.Name = "sgcMaterial";
+            this.sgcTelas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sgcTelas.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.sgcTelas.Location = new System.Drawing.Point(0, 33);
+            this.sgcTelas.Name = "sgcTelas";
             // 
             // 
             // 
-            this.sgcMaterial.PrimaryGrid.AllowEdit = false;
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.id_tela);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.tipo);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.clave_tela);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.descripcion);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.id_familia_composicion);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.id_estampado);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.id_proveedor);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.clave_proveedor);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.id_color);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.auxid_familia_composicion);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.auxid_estampado);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.auxid_proveedor);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.auxid_color);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.nombre);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.uso);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.tamano);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.observaciones);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.imagen);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.hacer_prueba_calidad);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.precio_unitario);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.estatus);
-            this.sgcMaterial.PrimaryGrid.Columns.Add(this.auxestatus);
-            this.sgcMaterial.PrimaryGrid.EnableColumnFiltering = true;
-            this.sgcMaterial.PrimaryGrid.EnableFiltering = true;
-            this.sgcMaterial.PrimaryGrid.EnableRowFiltering = true;
+            this.sgcTelas.PrimaryGrid.AllowEdit = false;
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.id_tela);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.tipo);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.auxtipo);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.clave_tela);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.descripcion);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.id_familia_composicion);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.id_estampado);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.id_proveedor);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.auxid_familia_composicion);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.auxid_estampado);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.auxid_proveedor);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.clave_proveedor);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.id_color);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.auxid_color);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.ancho_tela);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.observaciones);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.imagen);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.prueba_encogimiento_largo);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.prueba_encogimiento_ancho);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.estatus);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.auxestatus);
+            this.sgcTelas.PrimaryGrid.Columns.Add(this.estatus_tela);
+            this.sgcTelas.PrimaryGrid.EnableColumnFiltering = true;
+            this.sgcTelas.PrimaryGrid.EnableFiltering = true;
+            this.sgcTelas.PrimaryGrid.EnableRowFiltering = true;
             // 
             // 
             // 
-            this.sgcMaterial.PrimaryGrid.Filter.RowHeight = 25;
-            this.sgcMaterial.PrimaryGrid.Filter.Visible = true;
-            this.sgcMaterial.PrimaryGrid.FilterMatchType = DevComponents.DotNetBar.SuperGrid.FilterMatchType.RegularExpressions;
-            this.sgcMaterial.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
-            this.sgcMaterial.PrimaryGrid.UseAlternateColumnStyle = true;
-            this.sgcMaterial.PrimaryGrid.UseAlternateRowStyle = true;
-            this.sgcMaterial.Size = new System.Drawing.Size(800, 415);
-            this.sgcMaterial.TabIndex = 2;
-            this.sgcMaterial.Text = "sgcMaterial";
-            this.sgcMaterial.DataBindingComplete += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridDataBindingCompleteEventArgs>(this.sgcMaterial_DataBindingComplete);
-            this.sgcMaterial.SelectionChanged += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridEventArgs>(this.sgcMaterial_SelectionChanged);
-            this.sgcMaterial.Click += new System.EventHandler(this.CatalogoMaterial_Load);
+            this.sgcTelas.PrimaryGrid.Filter.RowHeight = 25;
+            this.sgcTelas.PrimaryGrid.Filter.Visible = true;
+            this.sgcTelas.PrimaryGrid.FilterMatchType = DevComponents.DotNetBar.SuperGrid.FilterMatchType.RegularExpressions;
+            this.sgcTelas.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
+            this.sgcTelas.PrimaryGrid.UseAlternateColumnStyle = true;
+            this.sgcTelas.PrimaryGrid.UseAlternateRowStyle = true;
+            this.sgcTelas.Size = new System.Drawing.Size(1284, 609);
+            this.sgcTelas.TabIndex = 2;
+            this.sgcTelas.Text = "sgcTelas";
+            this.sgcTelas.DataBindingComplete += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridDataBindingCompleteEventArgs>(this.sgcTela_DataBindingComplete);
+            this.sgcTelas.SelectionChanged += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridEventArgs>(this.sgcTela_SelectionChanged);
             // 
             // id_tela
             // 
@@ -319,14 +317,22 @@
             // 
             // tipo
             // 
-            this.tipo.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.ColumnHeader;
+            this.tipo.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.tipo.DataPropertyName = "tipo";
             this.tipo.HeaderText = "Tipo";
             this.tipo.Name = "tipo";
+            this.tipo.Visible = false;
+            // 
+            // auxtipo
+            // 
+            this.auxtipo.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
+            this.auxtipo.DataPropertyName = "auxtipo";
+            this.auxtipo.HeaderText = "Tipo";
+            this.auxtipo.Name = "auxtipo";
             // 
             // clave_tela
             // 
-            this.clave_tela.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+            this.clave_tela.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.clave_tela.DataPropertyName = "clave_tela";
             this.clave_tela.HeaderText = "Clave Tela";
             this.clave_tela.Name = "clave_tela";
@@ -334,15 +340,14 @@
             // 
             // descripcion
             // 
-            this.descripcion.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+            this.descripcion.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.descripcion.DataPropertyName = "descripcion";
             this.descripcion.HeaderText = "Descripcion";
             this.descripcion.Name = "descripcion";
-            this.descripcion.Visible = false;
             // 
             // id_familia_composicion
             // 
-            this.id_familia_composicion.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+            this.id_familia_composicion.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.id_familia_composicion.DataPropertyName = "id_familia_composicion";
             this.id_familia_composicion.HeaderText = "Familia Composicion";
             this.id_familia_composicion.Name = "id_familia_composicion";
@@ -350,43 +355,30 @@
             // 
             // id_estampado
             // 
-            this.id_estampado.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+            this.id_estampado.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.id_estampado.DataPropertyName = "id_estampado";
             this.id_estampado.HeaderText = "Estampado";
             this.id_estampado.Name = "id_estampado";
+            this.id_estampado.Visible = false;
             // 
             // id_proveedor
             // 
-            this.id_proveedor.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+            this.id_proveedor.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.id_proveedor.DataPropertyName = "id_proveedor";
             this.id_proveedor.HeaderText = "id_proveedor";
             this.id_proveedor.Name = "id_proveedor";
             this.id_proveedor.Visible = false;
             // 
-            // clave_proveedor
-            // 
-            this.clave_proveedor.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.clave_proveedor.DataPropertyName = "clave_proveedor";
-            this.clave_proveedor.HeaderText = "Clave Proveedor";
-            this.clave_proveedor.Name = "clave_proveedor";
-            // 
-            // id_color
-            // 
-            this.id_color.DataPropertyName = "id_color";
-            this.id_color.HeaderText = "id_color";
-            this.id_color.Name = "id_color";
-            this.id_color.Visible = false;
-            // 
             // auxid_familia_composicion
             // 
-            this.auxid_familia_composicion.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+            this.auxid_familia_composicion.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.auxid_familia_composicion.DataPropertyName = "auxid_familia_composicion";
             this.auxid_familia_composicion.HeaderText = "Familia Composicion";
             this.auxid_familia_composicion.Name = "auxid_familia_composicion";
             // 
             // auxid_estampado
             // 
-            this.auxid_estampado.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+            this.auxid_estampado.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
             this.auxid_estampado.DataPropertyName = "auxid_estampado";
             this.auxid_estampado.HeaderText = "Estampado";
             this.auxid_estampado.Name = "auxid_estampado";
@@ -399,6 +391,21 @@
             this.auxid_proveedor.InfoImageAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.auxid_proveedor.Name = "auxid_proveedor";
             // 
+            // clave_proveedor
+            // 
+            this.clave_proveedor.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
+            this.clave_proveedor.DataPropertyName = "clave_proveedor";
+            this.clave_proveedor.HeaderText = "Clave Proveedor";
+            this.clave_proveedor.Name = "clave_proveedor";
+            // 
+            // id_color
+            // 
+            this.id_color.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
+            this.id_color.DataPropertyName = "id_color";
+            this.id_color.HeaderText = "id_color";
+            this.id_color.Name = "id_color";
+            this.id_color.Visible = false;
+            // 
             // auxid_color
             // 
             this.auxid_color.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
@@ -406,26 +413,12 @@
             this.auxid_color.HeaderText = "Color";
             this.auxid_color.Name = "auxid_color";
             // 
-            // nombre
+            // ancho_tela
             // 
-            this.nombre.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Ancho Tela";
-            this.nombre.Name = "nombre";
-            // 
-            // uso
-            // 
-            this.uso.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.uso.DataPropertyName = "uso";
-            this.uso.HeaderText = "Uso";
-            this.uso.Name = "uso";
-            // 
-            // tamano
-            // 
-            this.tamano.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.tamano.DataPropertyName = "tamano";
-            this.tamano.HeaderText = "Tamaño";
-            this.tamano.Name = "tamano";
+            this.ancho_tela.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
+            this.ancho_tela.DataPropertyName = "ancho_tela";
+            this.ancho_tela.HeaderText = "Ancho Tela";
+            this.ancho_tela.Name = "ancho_tela";
             // 
             // observaciones
             // 
@@ -436,28 +429,29 @@
             // 
             // imagen
             // 
-            this.imagen.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
+            this.imagen.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
             this.imagen.DataPropertyName = "imagen";
             this.imagen.HeaderText = "Imagen";
             this.imagen.Name = "imagen";
+            this.imagen.Visible = false;
             // 
-            // hacer_prueba_calidad
+            // prueba_encogimiento_largo
             // 
-            this.hacer_prueba_calidad.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.hacer_prueba_calidad.DataPropertyName = "hacer_prueba_calidad";
-            this.hacer_prueba_calidad.HeaderText = "hacer_prueba_calidad";
-            this.hacer_prueba_calidad.Name = "hacer_prueba_calidad";
+            this.prueba_encogimiento_largo.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.ColumnHeader;
+            this.prueba_encogimiento_largo.DataPropertyName = "prueba_encogimiento_largo";
+            this.prueba_encogimiento_largo.HeaderText = "Prueba encojimiento largo";
+            this.prueba_encogimiento_largo.Name = "prueba_encogimiento_largo";
             // 
-            // precio_unitario
+            // prueba_encogimiento_ancho
             // 
-            this.precio_unitario.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
-            this.precio_unitario.DataPropertyName = "precio_unitario";
-            this.precio_unitario.HeaderText = "precio_unitario";
-            this.precio_unitario.Name = "precio_unitario";
+            this.prueba_encogimiento_ancho.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
+            this.prueba_encogimiento_ancho.DataPropertyName = "prueba_encogimiento_ancho";
+            this.prueba_encogimiento_ancho.HeaderText = "prueba_encogimiento_ancho";
+            this.prueba_encogimiento_ancho.Name = "prueba_encogimiento_ancho";
             // 
             // estatus
             // 
-            this.estatus.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.DisplayedCells;
+            this.estatus.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
             this.estatus.DataPropertyName = "estatus";
             this.estatus.HeaderText = "Estatus";
             this.estatus.Name = "estatus";
@@ -470,12 +464,18 @@
             this.auxestatus.HeaderText = "Estatus";
             this.auxestatus.Name = "auxestatus";
             // 
+            // estatus_tela
+            // 
+            this.estatus_tela.DataPropertyName = "estatus_tela";
+            this.estatus_tela.Name = "estatus_tela";
+            this.estatus_tela.Visible = false;
+            // 
             // CatalogTelas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.sgcMaterial);
+            this.ClientSize = new System.Drawing.Size(1284, 642);
+            this.Controls.Add(this.sgcTelas);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.dockSite3);
@@ -490,7 +490,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catálogo Materiales";
+            this.Text = "Catálogo Telas";
             this.dockSite7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.ResumeLayout(false);
@@ -508,7 +508,7 @@
         private DevComponents.DotNetBar.DockSite dockSite6;
         private DevComponents.DotNetBar.DockSite dockSite7;
         private DevComponents.DotNetBar.DockSite dockSite8;
-        private DevComponents.DotNetBar.SuperGrid.SuperGridControl sgcMaterial;
+        private DevComponents.DotNetBar.SuperGrid.SuperGridControl sgcTelas;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem btnAgregar;
         private DevComponents.DotNetBar.ButtonItem btnEditar;
@@ -521,15 +521,13 @@
         private DevComponents.DotNetBar.SuperGrid.GridColumn clave_tela;
         private DevComponents.DotNetBar.SuperGrid.GridColumn descripcion;
         private DevComponents.DotNetBar.SuperGrid.GridColumn id_familia_composicion;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn nombre;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn ancho_tela;
         private DevComponents.DotNetBar.SuperGrid.GridColumn id_color;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn uso;
         private DevComponents.DotNetBar.SuperGrid.GridColumn clave_proveedor;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn tamano;
         private DevComponents.DotNetBar.SuperGrid.GridColumn observaciones;
         private DevComponents.DotNetBar.SuperGrid.GridColumn imagen;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn hacer_prueba_calidad;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn precio_unitario;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn prueba_encogimiento_largo;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn prueba_encogimiento_ancho;
         private DevComponents.DotNetBar.SuperGrid.GridColumn estatus;
         private DevComponents.DotNetBar.SuperGrid.GridColumn id_proveedor;
         private DevComponents.DotNetBar.SuperGrid.GridColumn auxid_proveedor;
@@ -538,5 +536,7 @@
         private DevComponents.DotNetBar.SuperGrid.GridColumn auxestatus;
         private DevComponents.DotNetBar.SuperGrid.GridColumn auxid_estampado;
         private DevComponents.DotNetBar.SuperGrid.GridColumn id_estampado;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn estatus_tela;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn auxtipo;
     }
 }

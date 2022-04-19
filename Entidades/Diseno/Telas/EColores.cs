@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades.Diseno.Marcadores
+namespace Entidades.Diseno.Telas
 {
     public class EColores
     {

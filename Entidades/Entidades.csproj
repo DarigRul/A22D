@@ -45,6 +45,13 @@
     <Compile Include="Comercial\Precios\EPrecios.cs" />
     <Compile Include="Compras\EProveedor.cs" />
     <Compile Include="Compras\EProveedorContacto.cs" />
+    <Compile Include="Diseno\Calidad\ECalidad.cs" />
+    <Compile Include="Diseno\Calidad\EEntretelacombo.cs" />
+    <Compile Include="Diseno\Calidad\EOperariocombo.cs" />
+    <Compile Include="Diseno\Calidad\EPruebaCostura.cs" />
+    <Compile Include="Diseno\Calidad\EPruebaEncogimiento.cs" />
+    <Compile Include="Diseno\Calidad\EPruebaLavadoPilling.cs" />
+    <Compile Include="Diseno\Calidad\EResultadoPillingcombo.cs" />
     <Compile Include="Diseno\EColor.cs" />
     <Compile Include="Diseno\EComposicion.cs" />
     <Compile Include="Diseno\EEnsambles.cs" />
@@ -67,9 +74,9 @@
     <Compile Include="Diseno\Telas\EColores.cs" />
     <Compile Include="Diseno\Telas\EComprasProveedores.cs" />
     <Compile Include="Diseno\Telas\EEstampados.cs" />
-    <Compile Include="Diseno\Telas\EFamiliaComposiciones.cs" />
-    <Compile Include="Diseno\Telas\EMaterialesProcesosTela.cs" />
-    <Compile Include="Diseno\Telas\EMaterialTipoTela.cs" />
+    <Compile Include="Diseno\Telas\EFamiliaComposicioncombo.cs" />
+    <Compile Include="Diseno\Telas\EMaterialesProcesoscombo.cs" />
+    <Compile Include="Diseno\Telas\EMaterialTipo.cs" />
     <Compile Include="Diseno\Telas\EUnidadesMedidas.cs" />
     <Compile Include="Notificaciones\ENotificacion.cs" />
     <Compile Include="Notificaciones\ENotificacionDestinatario.cs" />

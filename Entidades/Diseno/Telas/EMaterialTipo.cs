@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades.Diseno.Marcadores
 {
-   public  class EMaterialTipoTela
+   public  class EMaterialTipocbo
     {
         public int id_material_tipo { get; set; }
         public string descripcion { get; set; }

@@ -11,3 +11,16 @@ D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Datos\obj\Debug\Datos.csproj.CoreCompil
 D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Datos\obj\Debug\Datos.csproj.CopyComplete
 D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Datos\obj\Debug\Datos.dll
 D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Datos\obj\Debug\Datos.pdb
+C:\Desarrollo2022\A22D\Datos\bin\Debug\Datos.dll
+C:\Desarrollo2022\A22D\Datos\bin\Debug\Datos.pdb
+C:\Desarrollo2022\A22D\Datos\bin\Debug\Entidades.dll
+C:\Desarrollo2022\A22D\Datos\bin\Debug\FluentFTP.dll
+C:\Desarrollo2022\A22D\Datos\bin\Debug\Renci.SshNet.dll
+C:\Desarrollo2022\A22D\Datos\bin\Debug\Entidades.pdb
+C:\Desarrollo2022\A22D\Datos\bin\Debug\FluentFTP.xml
+C:\Desarrollo2022\A22D\Datos\bin\Debug\Renci.SshNet.xml
+C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.dll
+C:\Desarrollo2022\A22D\Datos\obj\Debug\Datos.pdb

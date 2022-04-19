@@ -4,3 +4,9 @@ D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Entidades\obj\Debug\Entidades.csproj.As
 D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Entidades\obj\Debug\Entidades.dll
 D:\Desarrollos\ALTIMA-2022D\ALTIMA-2022D\Entidades\obj\Debug\Entidades.pdb
+C:\Desarrollo2022\A22D\Entidades\bin\Debug\Entidades.dll
+C:\Desarrollo2022\A22D\Entidades\bin\Debug\Entidades.pdb
+C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.dll
+C:\Desarrollo2022\A22D\Entidades\obj\Debug\Entidades.pdb

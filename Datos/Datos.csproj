@@ -54,6 +54,7 @@
     <Compile Include="Compras\DProveedor.cs" />
     <Compile Include="Compras\DProveedorContacto.cs" />
     <Compile Include="DConexion.cs" />
+    <Compile Include="Diseno\DCalidad.cs" />
     <Compile Include="Diseno\DColor.cs" />
     <Compile Include="Diseno\DComposicion.cs" />
     <Compile Include="Diseno\DEnsambles.cs" />
@@ -67,10 +68,10 @@
     <Compile Include="Diseno\DMateriales.cs" />
     <Compile Include="Diseno\DMaterialesProcesos.cs" />
     <Compile Include="Diseno\DMaterialTipo.cs" />
-    <Compile Include="Diseno\DTelas.cs" />
     <Compile Include="Diseno\DPiezasTrazo.cs" />
     <Compile Include="Diseno\DProcesos.cs" />
     <Compile Include="Diseno\DRutasProduccion.cs" />
+    <Compile Include="Diseno\DTelas.cs" />
     <Compile Include="Diseno\DUnidadesMedida.cs" />
     <Compile Include="Notificaciones\DNotificaciones.cs" />
     <Compile Include="Produccion\DLargos.cs" />

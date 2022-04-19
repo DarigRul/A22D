@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades.Diseno.Telas
 {
-    public class EFamiliaComposiciones
+   public class EMaterialesProcesoscombo
     {
-        public int id_familia_composicion { get; set; }
-        public string nombre { get; set; }
-        public int estatus { get; set; }
-
+        public int id_material_proceso { get; set; }
+        public string proceso { get; set; }
+        public string tipo { get; set; }
         public string auxdescrip { get; set; }
-    }
+            }
 }

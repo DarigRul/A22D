@@ -29,5 +29,6 @@ namespace Entidades.Diseno
         public string auxid_estampado { get; set; }
         public string auxid_proveedor { get; set; }
         public string auxid_color { get; set; }
+        public string auxtipo { get; set; }
     }
 }

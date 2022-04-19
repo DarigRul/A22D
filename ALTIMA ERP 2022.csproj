@@ -101,6 +101,24 @@
     <Compile Include="Compras\CatProveedores\ProveedoresAM.Designer.cs">
       <DependentUpon>ProveedoresAM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Diseno\CatCalidad\Calidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatCalidad\Calidad.designer.cs">
+      <DependentUpon>Calidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatCalidad\CatalogoCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatCalidad\CatalogoCalidad.designer.cs">
+      <DependentUpon>CatalogoCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatCalidad\ProcesoCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatCalidad\ProcesoCalidad.designer.cs">
+      <DependentUpon>ProcesoCalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diseno\CatColores\CatalogoColores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,18 +263,6 @@
     <Compile Include="Diseno\CatPrendas\PrendasAM.Designer.cs">
       <DependentUpon>PrendasAM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diseno\CatTelas\CatalogoTelas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Diseno\CatTelas\CatalogoTelas.Designer.cs">
-      <DependentUpon>CatalogoTelas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Diseno\CatTelas\Telas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Diseno\CatTelas\Telas.Designer.cs">
-      <DependentUpon>Telas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Diseno\CatPiezasTrazo\CatPiezasTrazo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,18 @@
     </Compile>
     <Compile Include="Diseno\CatPiezasTrazo\PiezasTrazoAM.Designer.cs">
       <DependentUpon>PiezasTrazoAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\CatalogoTelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\CatalogoTelas.designer.cs">
+      <DependentUpon>CatalogoTelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\Telas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diseno\CatTelas\Telas.designer.cs">
+      <DependentUpon>Telas.cs</DependentUpon>
     </Compile>
     <Compile Include="Diseno\CatTipoMaterial\CatTipoMaterial.cs">
       <SubType>Form</SubType>
@@ -472,6 +490,15 @@
     <EmbeddedResource Include="Compras\CatProveedores\ProveedoresAM.resx">
       <DependentUpon>ProveedoresAM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatCalidad\Calidad.resx">
+      <DependentUpon>Calidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatCalidad\CatalogoCalidad.resx">
+      <DependentUpon>CatalogoCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatCalidad\ProcesoCalidad.resx">
+      <DependentUpon>ProcesoCalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Diseno\CatColores\CatalogoColores.resx">
       <DependentUpon>CatalogoColores.cs</DependentUpon>
     </EmbeddedResource>
@@ -544,17 +571,17 @@
     <EmbeddedResource Include="Diseno\CatPrendas\PrendasAM.resx">
       <DependentUpon>PrendasAM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Diseno\CatTelas\CatalogoTelas.resx">
-      <DependentUpon>CatalogoTelas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Diseno\CatTelas\Telas.resx">
-      <DependentUpon>Telas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Diseno\CatPiezasTrazo\CatPiezasTrazo.resx">
       <DependentUpon>CatPiezasTrazo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diseno\CatPiezasTrazo\PiezasTrazoAM.resx">
       <DependentUpon>PiezasTrazoAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatTelas\CatalogoTelas.resx">
+      <DependentUpon>CatalogoTelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diseno\CatTelas\Telas.resx">
+      <DependentUpon>Telas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diseno\CatTipoMaterial\CatTipoMaterial.resx">
       <DependentUpon>CatTipoMaterial.cs</DependentUpon>
@@ -840,6 +867,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\importante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\i.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
