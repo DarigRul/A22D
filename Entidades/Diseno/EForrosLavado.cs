@@ -22,6 +22,7 @@ namespace Entidades.Diseno
         public string solidez_observaciones { get; set; }
         public string pilling { get; set; }
         public string pilling_observaciones { get; set; }
+        public string otras_observaciones { get; set; }
 
     }
 }
