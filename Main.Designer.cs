@@ -32,15 +32,6 @@ namespace ALTIMA_ERP_2022
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.rcAltima = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.rbProduccion = new DevComponents.DotNetBar.RibbonBar();
-            this.item = new DevComponents.DotNetBar.ItemContainer();
-            this.btnProcesos = new DevComponents.DotNetBar.ButtonItem();
-            this.btnRutasProduccion = new DevComponents.DotNetBar.ButtonItem();
-            this.container = new DevComponents.DotNetBar.ItemContainer();
-            this.btnCatalogoTallas = new DevComponents.DotNetBar.ButtonItem();
-            this.btnCatalogoLargos = new DevComponents.DotNetBar.ButtonItem();
-            this.btnCatalogoMaquileros = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
             this.rbMaterial = new DevComponents.DotNetBar.RibbonBar();
             this.itemContainer6 = new DevComponents.DotNetBar.ItemContainer();
@@ -61,6 +52,7 @@ namespace ALTIMA_ERP_2022
             this.contenedor = new DevComponents.DotNetBar.ItemContainer();
             this.btnFamiliaComposicion = new DevComponents.DotNetBar.ButtonItem();
             this.btnComposiciones = new DevComponents.DotNetBar.ButtonItem();
+            this.btnCatalogoEnsambles = new DevComponents.DotNetBar.ButtonItem();
             this.itemContainer4 = new DevComponents.DotNetBar.ItemContainer();
             this.btnMarcadores = new DevComponents.DotNetBar.ButtonItem();
             this.rbPrendas = new DevComponents.DotNetBar.RibbonBar();
@@ -68,6 +60,15 @@ namespace ALTIMA_ERP_2022
             this.itemContainer5 = new DevComponents.DotNetBar.ItemContainer();
             this.btnProduccionMuestras = new DevComponents.DotNetBar.ButtonItem();
             this.btnCalidad = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.rbProduccion = new DevComponents.DotNetBar.RibbonBar();
+            this.item = new DevComponents.DotNetBar.ItemContainer();
+            this.btnProcesos = new DevComponents.DotNetBar.ButtonItem();
+            this.btnRutasProduccion = new DevComponents.DotNetBar.ButtonItem();
+            this.container = new DevComponents.DotNetBar.ItemContainer();
+            this.btnCatalogoTallas = new DevComponents.DotNetBar.ButtonItem();
+            this.btnCatalogoLargos = new DevComponents.DotNetBar.ButtonItem();
+            this.btnCatalogoMaquileros = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.rbUsuarios = new DevComponents.DotNetBar.RibbonBar();
@@ -96,10 +97,9 @@ namespace ALTIMA_ERP_2022
             this.lblMensajes = new DevComponents.DotNetBar.LabelItem();
             this.lblSitio = new DevComponents.DotNetBar.LabelItem();
             this.tNotificaciones = new System.Windows.Forms.Timer(this.components);
-            this.btnCatalogoEnsambles = new DevComponents.DotNetBar.ButtonItem();
             this.rcAltima.SuspendLayout();
-            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -155,148 +155,6 @@ namespace ALTIMA_ERP_2022
             this.rcAltima.TabGroupsVisible = true;
             this.rcAltima.TabIndex = 0;
             this.rcAltima.Text = "ribbonControl1";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Controls.Add(this.rbProduccion);
-            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1300, 119);
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
-            // 
-            // rbProduccion
-            // 
-            this.rbProduccion.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.rbProduccion.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.rbProduccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rbProduccion.ContainerControlProcessDialogKey = true;
-            this.rbProduccion.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbProduccion.DragDropSupport = true;
-            this.rbProduccion.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.item,
-            this.container});
-            this.rbProduccion.Location = new System.Drawing.Point(3, 0);
-            this.rbProduccion.Name = "rbProduccion";
-            this.rbProduccion.Size = new System.Drawing.Size(281, 117);
-            this.rbProduccion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.rbProduccion.TabIndex = 0;
-            this.rbProduccion.Text = "Producción";
-            // 
-            // 
-            // 
-            this.rbProduccion.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.rbProduccion.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // item
-            // 
-            // 
-            // 
-            // 
-            this.item.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.item.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.item.Name = "item";
-            this.item.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnProcesos,
-            this.btnRutasProduccion});
-            // 
-            // 
-            // 
-            this.item.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.item.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // btnProcesos
-            // 
-            this.btnProcesos.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnProcesos.Image = global::ALTIMA_ERP_2022.Properties.Resources.procesos;
-            this.btnProcesos.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnProcesos.Name = "btnProcesos";
-            this.btnProcesos.Text = "Procesos";
-            this.btnProcesos.Click += new System.EventHandler(this.btnProcesos_Click);
-            // 
-            // btnRutasProduccion
-            // 
-            this.btnRutasProduccion.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnRutasProduccion.Image = global::ALTIMA_ERP_2022.Properties.Resources.rutas_produccion;
-            this.btnRutasProduccion.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnRutasProduccion.Name = "btnRutasProduccion";
-            this.btnRutasProduccion.Text = "Rutas de producción";
-            this.btnRutasProduccion.Click += new System.EventHandler(this.btnRutasProduccion_Click);
-            // 
-            // container
-            // 
-            // 
-            // 
-            // 
-            this.container.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.container.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.container.Name = "container";
-            this.container.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnCatalogoTallas,
-            this.btnCatalogoLargos,
-            this.btnCatalogoMaquileros});
-            // 
-            // 
-            // 
-            this.container.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.container.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // btnCatalogoTallas
-            // 
-            this.btnCatalogoTallas.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnCatalogoTallas.Image = global::ALTIMA_ERP_2022.Properties.Resources.tallas;
-            this.btnCatalogoTallas.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnCatalogoTallas.Name = "btnCatalogoTallas";
-            this.btnCatalogoTallas.Text = "Catálogo de tallas";
-            this.btnCatalogoTallas.Click += new System.EventHandler(this.btnCatalogoTallas_Click);
-            // 
-            // btnCatalogoLargos
-            // 
-            this.btnCatalogoLargos.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnCatalogoLargos.Image = global::ALTIMA_ERP_2022.Properties.Resources.largo;
-            this.btnCatalogoLargos.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnCatalogoLargos.Name = "btnCatalogoLargos";
-            this.btnCatalogoLargos.Text = "Catálogo de largos";
-            this.btnCatalogoLargos.Click += new System.EventHandler(this.btnCatalogoLargos_Click);
-            // 
-            // btnCatalogoMaquileros
-            // 
-            this.btnCatalogoMaquileros.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnCatalogoMaquileros.Image = global::ALTIMA_ERP_2022.Properties.Resources.largo;
-            this.btnCatalogoMaquileros.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnCatalogoMaquileros.Name = "btnCatalogoMaquileros";
-            this.btnCatalogoMaquileros.Text = "Catálogo de maquileros";
-            this.btnCatalogoMaquileros.Click += new System.EventHandler(this.btnCatalogoMaquileros_Click);
             // 
             // ribbonPanel1
             // 
@@ -611,6 +469,13 @@ namespace ALTIMA_ERP_2022
             this.btnComposiciones.Tooltip = "Composiciones";
             this.btnComposiciones.Click += new System.EventHandler(this.btnComposiciones_Click);
             // 
+            // btnCatalogoEnsambles
+            // 
+            this.btnCatalogoEnsambles.ImageFixedSize = new System.Drawing.Size(24, 24);
+            this.btnCatalogoEnsambles.Name = "btnCatalogoEnsambles";
+            this.btnCatalogoEnsambles.Text = "Ensambles";
+            this.btnCatalogoEnsambles.Click += new System.EventHandler(this.btnCatalogoEnsambles_Click);
+            // 
             // itemContainer4
             // 
             // 
@@ -682,6 +547,7 @@ namespace ALTIMA_ERP_2022
             this.btnPrendas.SubItemsExpandWidth = 14;
             this.btnPrendas.Text = "Prendas";
             this.btnPrendas.Tooltip = "Prendas";
+            this.btnPrendas.Click += new System.EventHandler(this.btnPrendas_Click);
             // 
             // itemContainer5
             // 
@@ -723,6 +589,148 @@ namespace ALTIMA_ERP_2022
             this.btnCalidad.SubItemsExpandWidth = 14;
             this.btnCalidad.Text = "Pruebas de Calidad";
             this.btnCalidad.Tooltip = "Calidad";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Controls.Add(this.rbProduccion);
+            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1300, 119);
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel4.TabIndex = 4;
+            this.ribbonPanel4.Visible = false;
+            // 
+            // rbProduccion
+            // 
+            this.rbProduccion.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.rbProduccion.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.rbProduccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rbProduccion.ContainerControlProcessDialogKey = true;
+            this.rbProduccion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rbProduccion.DragDropSupport = true;
+            this.rbProduccion.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.item,
+            this.container});
+            this.rbProduccion.Location = new System.Drawing.Point(3, 0);
+            this.rbProduccion.Name = "rbProduccion";
+            this.rbProduccion.Size = new System.Drawing.Size(281, 117);
+            this.rbProduccion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.rbProduccion.TabIndex = 0;
+            this.rbProduccion.Text = "Producción";
+            // 
+            // 
+            // 
+            this.rbProduccion.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.rbProduccion.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // item
+            // 
+            // 
+            // 
+            // 
+            this.item.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.item.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.item.Name = "item";
+            this.item.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnProcesos,
+            this.btnRutasProduccion});
+            // 
+            // 
+            // 
+            this.item.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.item.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnProcesos
+            // 
+            this.btnProcesos.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnProcesos.Image = global::ALTIMA_ERP_2022.Properties.Resources.procesos;
+            this.btnProcesos.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnProcesos.Name = "btnProcesos";
+            this.btnProcesos.Text = "Procesos";
+            this.btnProcesos.Click += new System.EventHandler(this.btnProcesos_Click);
+            // 
+            // btnRutasProduccion
+            // 
+            this.btnRutasProduccion.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnRutasProduccion.Image = global::ALTIMA_ERP_2022.Properties.Resources.rutas_produccion;
+            this.btnRutasProduccion.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnRutasProduccion.Name = "btnRutasProduccion";
+            this.btnRutasProduccion.Text = "Rutas de producción";
+            this.btnRutasProduccion.Click += new System.EventHandler(this.btnRutasProduccion_Click);
+            // 
+            // container
+            // 
+            // 
+            // 
+            // 
+            this.container.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.container.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.container.Name = "container";
+            this.container.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnCatalogoTallas,
+            this.btnCatalogoLargos,
+            this.btnCatalogoMaquileros});
+            // 
+            // 
+            // 
+            this.container.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.container.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnCatalogoTallas
+            // 
+            this.btnCatalogoTallas.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnCatalogoTallas.Image = global::ALTIMA_ERP_2022.Properties.Resources.tallas;
+            this.btnCatalogoTallas.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnCatalogoTallas.Name = "btnCatalogoTallas";
+            this.btnCatalogoTallas.Text = "Catálogo de tallas";
+            this.btnCatalogoTallas.Click += new System.EventHandler(this.btnCatalogoTallas_Click);
+            // 
+            // btnCatalogoLargos
+            // 
+            this.btnCatalogoLargos.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnCatalogoLargos.Image = global::ALTIMA_ERP_2022.Properties.Resources.largo;
+            this.btnCatalogoLargos.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnCatalogoLargos.Name = "btnCatalogoLargos";
+            this.btnCatalogoLargos.Text = "Catálogo de largos";
+            this.btnCatalogoLargos.Click += new System.EventHandler(this.btnCatalogoLargos_Click);
+            // 
+            // btnCatalogoMaquileros
+            // 
+            this.btnCatalogoMaquileros.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnCatalogoMaquileros.Image = global::ALTIMA_ERP_2022.Properties.Resources.largo;
+            this.btnCatalogoMaquileros.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnCatalogoMaquileros.Name = "btnCatalogoMaquileros";
+            this.btnCatalogoMaquileros.Text = "Catálogo de maquileros";
+            this.btnCatalogoMaquileros.Click += new System.EventHandler(this.btnCatalogoMaquileros_Click);
             // 
             // ribbonPanel3
             // 
@@ -1130,13 +1138,6 @@ namespace ALTIMA_ERP_2022
             this.tNotificaciones.Interval = 300000;
             this.tNotificaciones.Tick += new System.EventHandler(this.tNotificaciones_Tick);
             // 
-            // btnCatalogoEnsambles
-            // 
-            this.btnCatalogoEnsambles.ImageFixedSize = new System.Drawing.Size(24, 24);
-            this.btnCatalogoEnsambles.Name = "btnCatalogoEnsambles";
-            this.btnCatalogoEnsambles.Text = "Ensambles";
-            this.btnCatalogoEnsambles.Click += new System.EventHandler(this.btnCatalogoEnsambles_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1155,8 +1156,8 @@ namespace ALTIMA_ERP_2022
             this.Load += new System.EventHandler(this.Main_Load);
             this.rcAltima.ResumeLayout(false);
             this.rcAltima.PerformLayout();
-            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);

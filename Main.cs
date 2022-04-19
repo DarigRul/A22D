@@ -740,5 +740,21 @@ namespace ALTIMA_ERP_2022
                 frm.Show();
             }
         }
+
+        private void btnPrendas_Click(object sender, EventArgs e)
+        {
+            Form frm = this.MdiChildren.Cast<Form>().FirstOrDefault(x => x is Diseno.CatPrendas.CatalogoPrendas);
+            if (frm != null)
+            {
+                frm.BringToFront();
+                return;
+            }
+            else
+            {
+                frm = new Diseno.CatPrendas.CatalogoPrendas();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }
