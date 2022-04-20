@@ -70,10 +70,10 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             try
             {
                 //se llama ventana de telas para realizar el alta de registro
-                ECalidad obj = new ECalidad();
-                var nuevoGenero = new Calidad(obj, "Modificar");// (obj, "Alta");
-                nuevoGenero.refrescar += () => CatalogoCalidad_Load(this, EventArgs.Empty);
-                nuevoGenero.ShowDialog();
+                //ECalidad obj = new ECalidad();
+                //var nuevoGenero = new Calidad(obj, "Modificar");// (obj, "Alta");
+                //nuevoGenero.refrescar += () => CatalogoCalidad_Load(this, EventArgs.Empty);
+                //nuevoGenero.ShowDialog();
             }
             catch (Exception)
             {

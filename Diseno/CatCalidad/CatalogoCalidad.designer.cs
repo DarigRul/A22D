@@ -105,9 +105,9 @@
             this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite1.Location = new System.Drawing.Point(0, 33);
+            this.dockSite1.Location = new System.Drawing.Point(0, 35);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(0, 417);
+            this.dockSite1.Size = new System.Drawing.Size(0, 415);
             this.dockSite1.TabIndex = 0;
             this.dockSite1.TabStop = false;
             // 
@@ -116,9 +116,9 @@
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(800, 33);
+            this.dockSite2.Location = new System.Drawing.Point(800, 35);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 417);
+            this.dockSite2.Size = new System.Drawing.Size(0, 415);
             this.dockSite2.TabIndex = 1;
             this.dockSite2.TabStop = false;
             // 
@@ -136,9 +136,9 @@
             // 
             this.dockSite5.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dockSite5.Location = new System.Drawing.Point(0, 33);
+            this.dockSite5.Location = new System.Drawing.Point(0, 35);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 417);
+            this.dockSite5.Size = new System.Drawing.Size(0, 415);
             this.dockSite5.TabIndex = 4;
             this.dockSite5.TabStop = false;
             // 
@@ -146,9 +146,9 @@
             // 
             this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite6.Location = new System.Drawing.Point(800, 33);
+            this.dockSite6.Location = new System.Drawing.Point(800, 35);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 417);
+            this.dockSite6.Size = new System.Drawing.Size(0, 415);
             this.dockSite6.TabIndex = 5;
             this.dockSite6.TabStop = false;
             // 
@@ -159,7 +159,7 @@
             this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite7.Location = new System.Drawing.Point(0, 0);
             this.dockSite7.Name = "dockSite7";
-            this.dockSite7.Size = new System.Drawing.Size(800, 33);
+            this.dockSite7.Size = new System.Drawing.Size(800, 35);
             this.dockSite7.TabIndex = 6;
             this.dockSite7.TabStop = false;
             // 
@@ -181,7 +181,7 @@
             this.btnSalir});
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(439, 33);
+            this.bar1.Size = new System.Drawing.Size(463, 35);
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
@@ -246,7 +246,7 @@
             this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite3.Location = new System.Drawing.Point(0, 33);
+            this.dockSite3.Location = new System.Drawing.Point(0, 35);
             this.dockSite3.Name = "dockSite3";
             this.dockSite3.Size = new System.Drawing.Size(800, 0);
             this.dockSite3.TabIndex = 2;
@@ -254,9 +254,11 @@
             // 
             // sgcCalidad
             // 
+            this.sgcCalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.sgcCalidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sgcCalidad.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.sgcCalidad.Location = new System.Drawing.Point(0, 33);
+            this.sgcCalidad.ForeColor = System.Drawing.Color.Black;
+            this.sgcCalidad.Location = new System.Drawing.Point(0, 35);
             this.sgcCalidad.Name = "sgcCalidad";
             // 
             // 
@@ -290,7 +292,7 @@
             this.sgcCalidad.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
             this.sgcCalidad.PrimaryGrid.UseAlternateColumnStyle = true;
             this.sgcCalidad.PrimaryGrid.UseAlternateRowStyle = true;
-            this.sgcCalidad.Size = new System.Drawing.Size(800, 417);
+            this.sgcCalidad.Size = new System.Drawing.Size(800, 415);
             this.sgcCalidad.TabIndex = 8;
             this.sgcCalidad.Text = "sgcCalidad";
             this.sgcCalidad.DataBindingComplete += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridDataBindingCompleteEventArgs>(this.sgcCalidad_DataBindingComplete);

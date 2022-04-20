@@ -10,11 +10,12 @@ namespace Datos.Diseno
 {
     public class DCalidad
     {
-        public static int SetInsertarCalidad(ECalidad inserta, EPruebaEncogimiento encogimiento, EPruebaLavadoPilling lavado)
+        public static int SetInsertarCalidad(ECalidad inserta, EPruebaEncogimiento encogimiento, EPruebaLavadoPilling lavado, EPruebaCostura costura)
         {
             int valoridencogimiento = 0;
             int valoridlavado = 0;
             int valoridlavadocostura = 0;
+            int valoridcontaminacion = 0;
             try
             {
                 List<EPruebaEncogimiento> lstpruebaencogimiento = new List<EPruebaEncogimiento>();
@@ -57,7 +58,7 @@ namespace Datos.Diseno
                     }
 
                 }
-              
+
                 foreach (EPruebaEncogimiento itm in lstpruebaencogimiento)
                 {
                     valoridencogimiento = itm.id_prueba_encogimiento;// se obtiene el id insertado para utilizarlo en el encabezado del registro
@@ -96,11 +97,78 @@ namespace Datos.Diseno
 
                 foreach (EPruebaLavadoPilling itm in lstlavado)
                 {
-                    valoridlavado= itm.id_lavado;// se obtiene el id insertado para utilizarlo en el encabezado del registro
+                    valoridlavado = itm.id_lavado;// se obtiene el id insertado para utilizarlo en el encabezado del registro
+                }
+
+                //proceso para insertar costura
+
+
+                List<EPruebaCostura> lstcostura = new List<EPruebaCostura>();
+
+                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para insersion tabla prueba de diseno_forros_prueba_lavado 
+                {
+                    SqlCommand comando = new SqlCommand("diseno_calidad_prueba_costura_registrar", cn) { CommandType = CommandType.StoredProcedure };
+                    comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = costura.id_tela;
+                    comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = costura.id_operario;
+                    comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = costura.fecha;
+                    comando.Parameters.Add("@LAVADO_HILO_FINAL", SqlDbType.Decimal).Value = costura.aguja;
+                    comando.Parameters.Add("@LAVADO_TRAMA_FINAL", SqlDbType.Decimal).Value = costura.deslizamiento;
+                    comando.Parameters.Add("@LAVADO_HILO_DIFERENCIA", SqlDbType.Int).Value = costura.deslizamientoobservaciones;
+                    comando.Parameters.Add("@LAVADO_TRAMA_DIFERENCIA", SqlDbType.Decimal).Value = costura.rasgado;
+                    comando.Parameters.Add("@LAVADO_OBSERVACIONES", SqlDbType.Int).Value = costura.rasgadoobservaciones;
+                    cn.Open();
+                    SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
+                    while (rd.Read())
+                    {
+                        lstcostura.Add(new EPruebaCostura
+                        {
+                            id_costura = DBNull.Value.Equals(rd["id_costura"]) ? 0 : Convert.ToInt32(rd["id_costura"]),
+
+                        });
+                    }
+
+                }
+
+                foreach (EPruebaCostura itm in lstcostura)
+                {
+                    valoridlavadocostura = itm.id_costura;// se obtiene el id insertado para utilizarlo en el encabezado del registro
                 }
 
 
 
+                //proceso para insertar contaminacion combinacion  de telas
+
+
+                List<EPruebaCostura> lstcombinacion = new List<EPruebaCostura>();
+
+                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para insersion tabla prueba de diseno_forros_prueba_lavado 
+                {
+                    SqlCommand comando = new SqlCommand("diseno_calidad_prueba_costura_registrar", cn) { CommandType = CommandType.StoredProcedure };
+                    comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = costura.id_tela;
+                    comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = costura.id_operario;
+                    comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = costura.fecha;
+                    comando.Parameters.Add("@LAVADO_HILO_FINAL", SqlDbType.Decimal).Value = costura.aguja;
+                    comando.Parameters.Add("@LAVADO_TRAMA_FINAL", SqlDbType.Decimal).Value = costura.deslizamiento;
+                    comando.Parameters.Add("@LAVADO_HILO_DIFERENCIA", SqlDbType.Int).Value = costura.deslizamientoobservaciones;
+                    comando.Parameters.Add("@LAVADO_TRAMA_DIFERENCIA", SqlDbType.Decimal).Value = costura.rasgado;
+                    comando.Parameters.Add("@LAVADO_OBSERVACIONES", SqlDbType.Int).Value = costura.rasgadoobservaciones;
+                    cn.Open();
+                    SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
+                    while (rd.Read())
+                    {
+                        lstcombinacion.Add(new EPruebaCostura
+                        {
+                            id_costura = DBNull.Value.Equals(rd["id_costura"]) ? 0 : Convert.ToInt32(rd["id_costura"]),
+
+                        });
+                    }
+
+                }
+
+                foreach (EPruebaCostura itm in lstcombinacion)
+                {
+                    valoridlavadocostura = itm.id_costura;// se obtiene el id insertado para utilizarlo en el encabezado del registro
+                }
 
 
 
@@ -142,8 +210,8 @@ namespace Datos.Diseno
                     valor = itm.id_calidad;
                 }
                 //empieza proceso para insercion de prueba calidad
-               
-              
+
+
                 return valor;
             }
             catch (Exception e)

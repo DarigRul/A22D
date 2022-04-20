@@ -12,6 +12,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.SuperGrid;
 using Entidades.Diseno;
 using Datos.Diseno;
+using ALTIMA_ERP_2022.Diseno.CatCalidad;
+
 namespace ALTIMA_ERP_2022.Diseno.CatTelas
 {
     public partial class CatalogTelas: OfficeForm
@@ -322,6 +324,29 @@ namespace ALTIMA_ERP_2022.Diseno.CatTelas
         {
             Close();
             Dispose();
+        }
+
+        private void BtnPruebascalidad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var row = panel.ActiveRow as GridRow;
+                if (row != null)
+                {
+                    var tela = row.DataItem as ETelas;
+                    var calidad = new Calidad(tela);
+                    calidad.ShowDialog();
+                }
+                else
+                {
+                    MessageBoxEx.Show("Seleccione un forro", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show($"{ex.Message}\r\n{ex.InnerException}\r\n{ex.StackTrace}", "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

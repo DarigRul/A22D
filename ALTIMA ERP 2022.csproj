@@ -104,13 +104,13 @@
     <Compile Include="Diseno\CatCalidad\Calidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diseno\CatCalidad\Calidad.designer.cs">
+    <Compile Include="Diseno\CatCalidad\Calidad.Designer.cs">
       <DependentUpon>Calidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Diseno\CatCalidad\CatalogoCalidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diseno\CatCalidad\CatalogoCalidad.designer.cs">
+    <Compile Include="Diseno\CatCalidad\CatalogoCalidad.Designer.cs">
       <DependentUpon>CatalogoCalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Diseno\CatCalidad\ProcesoCalidad.cs">

@@ -37,3 +37,16 @@ D:\Desarrollos\A22D\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 D:\Desarrollos\A22D\Datos\obj\Debug\Datos.csproj.CopyComplete
 D:\Desarrollos\A22D\Datos\obj\Debug\Datos.dll
 D:\Desarrollos\A22D\Datos\obj\Debug\Datos.pdb
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\Datos.dll
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\Datos.pdb
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\Entidades.dll
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\FluentFTP.dll
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\Renci.SshNet.dll
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\Entidades.pdb
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\FluentFTP.xml
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\bin\Debug\Renci.SshNet.xml
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\obj\Debug\Datos.dll
+C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Datos\obj\Debug\Datos.pdb

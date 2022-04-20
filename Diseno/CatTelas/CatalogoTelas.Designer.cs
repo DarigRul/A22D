@@ -68,6 +68,7 @@
             this.estatus = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.auxestatus = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.estatus_tela = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.BtnPruebascalidad = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
@@ -183,11 +184,12 @@
             this.btnEditar,
             this.btnActivar,
             this.btnDesactivar,
+            this.BtnPruebascalidad,
             this.btnReporte,
             this.btnSalir});
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(439, 33);
+            this.bar1.Size = new System.Drawing.Size(572, 33);
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
@@ -470,6 +472,15 @@
             this.estatus_tela.Name = "estatus_tela";
             this.estatus_tela.Visible = false;
             // 
+            // BtnPruebascalidad
+            // 
+            this.BtnPruebascalidad.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.BtnPruebascalidad.Image = global::ALTIMA_ERP_2022.Properties.Resources.pruebas_calidad;
+            this.BtnPruebascalidad.ImageFixedSize = new System.Drawing.Size(24, 24);
+            this.BtnPruebascalidad.Name = "BtnPruebascalidad";
+            this.BtnPruebascalidad.Text = "Pruebas de calidad";
+            this.BtnPruebascalidad.Click += new System.EventHandler(this.BtnPruebascalidad_Click);
+            // 
             // CatalogTelas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,5 +549,6 @@
         private DevComponents.DotNetBar.SuperGrid.GridColumn id_estampado;
         private DevComponents.DotNetBar.SuperGrid.GridColumn estatus_tela;
         private DevComponents.DotNetBar.SuperGrid.GridColumn auxtipo;
+        private DevComponents.DotNetBar.ButtonItem BtnPruebascalidad;
     }
 }
