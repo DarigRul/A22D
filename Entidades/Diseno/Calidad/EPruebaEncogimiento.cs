@@ -8,8 +8,8 @@ namespace Entidades.Diseno.Calidad
 {
     public class EPruebaEncogimiento
     {
-        public int id_prueba_encogimiento { get; set; }
-        public int id_forro { get; set; }
+        public int id_encogimiento { get; set; }
+        public int id_tela { get; set; }
         public int id_operario { get; set; }
         public DateTime fecha_hora { get; set; }
         public int id_entretela { get; set; }
@@ -28,7 +28,7 @@ namespace Entidades.Diseno.Calidad
         public double fusion_hilo_final { get; set; }
         public double fusion_trama_final { get; set; }
         public double fusion_hilo_diferencia { get; set; }
-        public double cm_hilo_fusion { get; set; }
+        //public double cm_hilo_fusion { get; set; }
         //public double diferencia_trama_fision { get; set; }
         //public double cm_trama_fision { get; set; }
         public double fusion_trama_diferencia { get; set; }

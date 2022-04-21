@@ -22,3 +22,9 @@ C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Entidades\obj\Debug\Entidades.c
 C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Entidades\obj\Debug\Entidades.dll
 C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\Entidades\obj\Debug\Entidades.pdb
+C:\Users\GIOVANNI M\Source\Repos\A22D\Entidades\bin\Debug\Entidades.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\Entidades\bin\Debug\Entidades.pdb
+C:\Users\GIOVANNI M\Source\Repos\A22D\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\GIOVANNI M\Source\Repos\A22D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\GIOVANNI M\Source\Repos\A22D\Entidades\obj\Debug\Entidades.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\Entidades\obj\Debug\Entidades.pdb

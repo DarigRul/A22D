@@ -28,11 +28,11 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
         DataTable dtEntretelaEncogimiento;
         DataTable dtEntretelaLavado;
         DataTable dtEntretelaContaminacion;
-        DataTable dtEntretelaCostura; 
+        DataTable dtEntretelaCostura;
 
         int pEnc, pLav, pCost, pCont = 0;
         public ETelas TelasGenarl;
-       
+
 
         public Calidad(ETelas tela)
         {
@@ -45,7 +45,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
         {
             try
             {
-               
+
 
 
                 //Verificamos que exista la prueba de encogimiento 
@@ -56,7 +56,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                     var enc = DForrosEncogimiento.Importar(forro.id_forro);
 
                     //Asignamos el id_encogimiento para las actualizaciones
-                    pEnc = enc.id_encogimiento; 
+                    pEnc = enc.id_encogimiento;
 
                     //Cargamos la información en los campos de prueba de encogimiento
                     txtVaporAdherencia.Value = enc.adherencia;
@@ -68,13 +68,13 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                     txtVaporTramaFinal.Value = enc.vapor_trama_final;
                     txtVaporHiloDiferencia.Value = enc.vapor_hilo_diferencia;
                     txtVaporTramaDiferencia.Value = enc.vapor_trama_diferencia;
-                    txtVaporObservaciones.Text = enc.vapor_observaciones; 
+                    txtVaporObservaciones.Text = enc.vapor_observaciones;
 
                     txtFusionHiloFinal.Value = enc.fusion_hilo_final;
                     txtFusionTramaFinal.Value = enc.fusion_trama_final;
                     txtFusionHiloDiferencia.Value = enc.fusion_hilo_diferencia;
                     txtFusionTramaDiferencia.Value = enc.fusion_trama_diferencia;
-                    txtFusionObservaciones.Text = enc.fusion_observaciones; 
+                    txtFusionObservaciones.Text = enc.fusion_observaciones;
 
                     txtPlanchaHiloFinal.Value = enc.plancha_hilo_final;
                     txtPlanchaTramaFinal.Value = enc.plancha_trama_final;
@@ -83,7 +83,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                     txtPlanchaObservaciones.Text = enc.plancha_observaciones;
 
                     cmbOperarioEncogimiento.SelectedValue = enc.id_operario;
-                    cmbTelaEncogimiento.SelectedValue = enc.id_entretela; 
+                    cmbTelaEncogimiento.SelectedValue = enc.id_entretela;
                 }
 
 
@@ -99,56 +99,52 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (validatab1() == true && validatab2() == true && validatab3() == true && validatab4() == true)
+
+            string valida1 = validatab1txtbox();
+            string valida2 = validatab2txtbox();
+            string valida3 = validatab3txtbox();
+            string valida4 = validatab4txtbox();
+            int bandera = 0;
+            string mensaje = "";
+            if (valida1 == "" || validatab1() == false)//proceso para validar si el tab 1 es correcto para actualizar informacion
             {
-                string valida1 = validatab1txtbox();
-                string valida2 = validatab2txtbox();
-                //string valida3 = validatab3txtbox();
-                //string valida4 = validatab4txtbox();
-                //if (valida1 != "" && valida2 != "" && valida3 != "" && valida4 != "")
-                //{
-
-                //}
-                //else
-                //{
-                //    if (valida1 == "")
-                //    {
-                //        MessageBoxEx.Show(valida1, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //    if (valida2 == "")
-                //    {
-                //        MessageBoxEx.Show(valida2, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //    if (valida3 == "")
-                //    {
-                //        MessageBoxEx.Show(valida3, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //    if (valida4 == "")
-                //    {
-                //        MessageBoxEx.Show(valida4, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //}
-
+                bandera += 1;
+                mensaje += "La pestaña encogimiento no ha sido completada, no será actualizada.\n";
             }
             else
             {
-                if (validatab1() == false)
-                {
-                    MessageBoxEx.Show("Error, el pre llenado de los combos de la pestaña 1 no tienen registros, verifique antes de procesar.", "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (validatab2() == false)
-                {
-                    MessageBoxEx.Show("Error, el pre llenado de los combos de la pestaña 2 no tienen registros, verifique antes de procesar.", "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (validatab3() == false)
-                {
-                    MessageBoxEx.Show("Error, el pre llenado de los combos de la pestaña 3 no tienen registros, verifique antes de procesar.", "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (validatab4() == false)
-                {
-                    MessageBoxEx.Show("Error, el pre llenado de los combos de la pestaña 4 no tienen registros, verifique antes de procesar.", "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
             }
+            if (valida2 == "" || validatab2() == false)//proceso para validar si el tab 2 es correcto para actualizar informacion
+            {
+                bandera += 2;
+                mensaje += "La pestaña lavado y pilling no ha sido completada, no será actualizada.\n";
+            }
+            else
+            {
+
+            }
+            if (valida3 == "" || validatab3() == false)//proceso para validar si el tab 2 es correcto para actualizar informacion
+            {
+                bandera += 3;
+                mensaje += "La pestaña  costura no ha sido completada, no será actualizada.\n";
+            }
+            else
+            {
+
+            }
+            if (valida4 == "" || validatab4() == false)//proceso para validar si el tab 2 es correcto para actualizar informacion
+            {
+                bandera += 4;
+                mensaje += "La pestaña  contaminación en combinación de telas no ha sido completada, no será actualizada.\n";
+            }
+            else
+            {
+
+            }
+            MessageBoxEx.Show(mensaje, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
         }
         public Boolean validatab1()
         {
@@ -203,94 +199,164 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             double presion1;
             double medidafinal1;
             double trama1;
-            //if (DT1Fechaencogimiento.MonthCalendar == string.Empty)
-            //{
-            //    cadena += "Error en capturar fecha.";
-            //}
-            //if (!double.TryParse(Txt1Adherenciaencogimiento.Text, out adherencia1))
-            //{
-            //    cadena += "  Error, validación en campo Adherencia, verifique.";
-            //}
-            //if (!double.TryParse(Txt1Temperaturaencogimiento.Text, out temperatura1))
-            //{
-            //    cadena += "  Error, validación en campo temperatura, verifique.";
-            //}
-            //if (!double.TryParse(Txt1Tiempoencogimiento.Text, out tiempo1))
-            //{
-            //    cadena += "  Error, validación en campo temperatura, verifique.";
-            //}
-            //if (!double.TryParse(Txt1Presionencogimiento.Text, out presion1))
-            //{
-            //    cadena += "  Error, validación en campo presión, verifique.";
-            //}
-            //if (!double.TryParse(Txt1MedidaFinalHiloVaporencogimiento.Text, out medidafinal1))
-            //{
-            //    cadena += "  Error, validación en campo presión, verifique.";
-            //}
-            //if (!double.TryParse(Txt1MedidafinaltramaVaporencogimiento.Text, out trama1))
-            //{
-            //    cadena += "  Error, validación en campo presión, verifique.";
-            //}
+            double medidafusionhilofinal;
+            double medidafusiontramafinal;
+            double medidafusionhilodiferencia;
+            double medidafusionobservaciones;
+            double medidaplanchahilofinal;
+            double medidaplanchatramafinal;
+            double medidaplanchahilodiferencia;
+            double medidaplanchatramadiferencia;
+            double medidaplanchaobservaciones;
+            if (dtiFechaEncogimiento.Text == string.Empty)
+            {
+                cadena += "Error en capturar fecha.\n";
+            }
+            if (!double.TryParse(txtVaporAdherencia.Text, out adherencia1))
+            {
+                cadena += "  Error, validación en campo Adherencia, verifique.\n";
+            }
+            if (!double.TryParse(txtVaporTemperatura.Text, out temperatura1))
+            {
+                cadena += "  Error, validación en campo temperatura, verifique.\n";
+            }
+            if (!double.TryParse(txtVaporTiempo.Text, out tiempo1))
+            {
+                cadena += "  Error, validación en campo tiempo, verifique.\n";
+            }
+            if (!double.TryParse(txtVaporPresion.Text, out presion1))
+            {
+                cadena += "  Error, validación en campo presión, verifique.\n";
+            }
+            if (!double.TryParse(txtVaporObservaciones.Text, out medidafinal1))
+            {
+                cadena += "  Error, validación en campo observación, verifique.\n";
+            }
 
+            if (!double.TryParse(txtFusionHiloFinal.Text, out medidafusionhilofinal))
+            {
+                cadena += "  Error, validación en campo fusión hilo final, verifique.\n";
+            }
+            if (!double.TryParse(txtFusionTramaFinal.Text, out medidafusiontramafinal))
+            {
+                cadena += "  Error, validación en campo fusión trama final, verifique.\n";
+            }
+            if (!double.TryParse(txtFusionHiloDiferencia.Text, out medidafusionhilodiferencia))
+            {
+                cadena += "  Error, validación en campo fusión hilo diferencia, verifique.\n";
+            }
+            if (!double.TryParse(txtFusionTramaDiferencia.Text, out medidafusiontramafinal))
+            {
+                cadena += "  Error, validación en campo fusión trama diferencia, verifique.\n";
+            }
+
+            if (!double.TryParse(txtFusionObservaciones.Text, out medidafusionobservaciones))
+            {
+                cadena += "  Error, validación en campo fusión observaciones, verifique.\n";
+            }
+            if (!double.TryParse(txtPlanchaHiloFinal.Text, out medidaplanchahilofinal))
+            {
+                cadena += "  Error, validación en campo fusión hilo final, verifique.\n";
+            }
+            if (!double.TryParse(txtPlanchaTramaFinal.Text, out medidaplanchatramafinal))
+            {
+                cadena += "  Error, validación en campo plancha trama final, verifique.\n";
+            }
+            if (!double.TryParse(txtPlanchaHiloDiferencia.Text, out medidaplanchahilodiferencia))
+            {
+                cadena += "  Error, validación en campo plancha hilo diferencia, verifique.\n";
+            }
+            if (!double.TryParse(txtPlanchaTramaDiferencia.Text, out medidaplanchatramadiferencia))
+            {
+                cadena += "  Error, validación en campo plancha trama diferencia, verifique.\n";
+            }
+            if (!double.TryParse(txtPlanchaObservaciones.Text, out medidaplanchaobservaciones))
+            {
+                cadena += "  Error, validación en campo plancha observaciones, verifique.\n";
+            }
             return cadena;
         }
         public string validatab2txtbox()
         {
             string cadena = "";
-            double finalhilo2;
-            double trama2;
-            double hilolavado2;
-            double cmlavado2;
-            double tramalavado2;
-            double cmtramalavado2;
-            //if (dp2fechalavado.MonthCalendar == null)
-            //{
-            //    cadena += "Error en capturar fecha.";
-            //}
-            //if (!double.TryParse(txt2FinalHilolavado.Text, out finalhilo2))
-            //{
-            //    cadena += "  Error, validación en campo Adherencia, verifique.";
-            //}
-            //if (!double.TryParse(txt2medidatramalavado.Text, out trama2))
-            //{
-            //    cadena += "  Error, validación en campo temperatura, verifique.";
-            //}
-            //if (!double.TryParse(txt2diferenciahilolavado.Text, out hilolavado2))
-            //{
-            //    cadena += "  Error, validación en campo temperatura, verifique.";
-            //}
-            //if (!double.TryParse(txt2cmhilolavado.Text, out cmlavado2))
-            //{
-            //    cadena += "  Error, validación en campo presión, verifique.";
-            //}
-            //if (!double.TryParse(txt2tramalavado.Text, out tramalavado2))
-            //{
-            //    cadena += "  Error, validación en campo presión, verifique.";
-            //}
-            //if (!double.TryParse(txt2cmtramalavado.Text, out cmtramalavado2))
-            //{
-            //    cadena += "  Error, validación en campo presión, verifique.";
-            //}
+            double finallavado;
+            double finaltrama;
+            double hilodiferencia;
+            double lavadotramadidiferencia;
+            double lavadoobservaciones;
+            double solidezobservacion;
+            double pillingobservacion;
+            if (dtiLavadoFecha.Text == string.Empty)
+            {
+                cadena += "Error en capturar fecha.\n";
+            }
+            if (!double.TryParse(txtLavadoHiloFinal.Text, out finallavado))
+            {
+                cadena += "  Error, validación en campo lavado hilo final, verifique.\n";
+            }
+            if (!double.TryParse(txtLavadoTramaFinal.Text, out finaltrama))
+            {
+                cadena += "  Error, validación en campo lavado trama final, verifique.\n";
+            }
+            if (!double.TryParse(txtLavadoHiloDiferencia.Text, out hilodiferencia))
+            {
+                cadena += "  Error, validación en campo lavado hilo diferencia, verifique.\n";
+            }
+            if (!double.TryParse(txtLavadoTramaDiferencia.Text, out lavadotramadidiferencia))
+            {
+                cadena += "  Error, validación en campo lavado trama diferencia, verifique.\n";
+            }
+            if (!double.TryParse(txtLavadoObservaciones.Text, out lavadoobservaciones))
+            {
+                cadena += "  Error, validación en campo lavado observación, verifique.\n";
+            }
+            if (!double.TryParse(txtSolidezObservaciones.Text, out solidezobservacion))
+            {
+                cadena += "  Error, validación en campo presión, verifique.\n";
+            }
+            if (!double.TryParse(txtPillingObservaciones.Text, out pillingobservacion))
+            {
+                cadena += "  Error, validación en campo pilling observaciones, verifique.\n";
+            }
             return cadena;
         }
-        //public string validatab3txtbox()
-        //{
-        //    string cadena = "";
-        //    if (dt3pruebacalidad.MonthCalendar == null)
-        //    {
-        //        cadena += "Error en capturar fecha.";
-        //    }
-        //    return cadena;
-        //}
-        //public string validatab4txtbox()
-        //{
-        //    string cadena = "";
-        //    if (dt4fechacontaminante.MonthCalendar == null)
-        //    {
-        //        cadena += "Error en capturar fecha.";
-        //    }
-        //    return cadena;
-        //}
+        public string validatab3txtbox()
+        {
+            string cadena = "";
+            double deslizamientoobservacion;
+            double rasgado;
+            if (dateTimeInput1.Text == string.Empty)
+            {
+                cadena += "Error en capturar fecha.\n";
+            }
+            if (!double.TryParse(txtDeslizamientoObservaciones.Text, out deslizamientoobservacion))
+            {
+                cadena += "  Error, validación en campo deslizamiento observación, verifique.\n";
+            }
+
+            if (!double.TryParse(txtRasgadoObservaciones.Text, out rasgado))
+            {
+                cadena += "  Error, validación en campo rasgado observación, verifique.\n";
+            }
+            return cadena;
+        }
+
+
+        public string validatab4txtbox()
+        {
+            string cadena = "";
+            double contaminacionobservacion;
+            if (dtiContaminacionFecha.Text == string.Empty)
+            {
+                cadena += "Error en capturar fecha.\n";
+            }
+            if (!double.TryParse(txtContaminacionObservaciones.Text, out contaminacionobservacion))
+            {
+                cadena += "  Error, validación en campo contaminación observación, verifique.\n";
+            }
+            return cadena;
+        }
+
         //private bool ValidaCampoEncogimiento()
         //{
 

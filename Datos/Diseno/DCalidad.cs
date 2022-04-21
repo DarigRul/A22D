@@ -22,7 +22,7 @@ namespace Datos.Diseno
                 using (SqlConnection cn = DConexion.obtenerConexion()) // proceso para insercion tabla diseno_forros_prueba_encogimiento
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_encogimiento_registrar", cn) { CommandType = CommandType.StoredProcedure };
-                    comando.Parameters.Add("@ID_FORRO", SqlDbType.Int).Value = encogimiento.id_forro;
+                    comando.Parameters.Add("@ID_FORRO", SqlDbType.Int).Value = encogimiento.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = encogimiento.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = encogimiento.fecha_hora;
                     comando.Parameters.Add("@ID_ENTRETELA", SqlDbType.Int).Value = encogimiento.id_entretela;
@@ -52,7 +52,7 @@ namespace Datos.Diseno
                     {
                         lstpruebaencogimiento.Add(new EPruebaEncogimiento
                         {
-                            id_prueba_encogimiento = DBNull.Value.Equals(rd["id_prueba_encogimiento"]) ? 0 : Convert.ToInt32(rd["id_prueba_encogimiento"]),
+                            id_encogimiento = DBNull.Value.Equals(rd["id_prueba_encogimiento"]) ? 0 : Convert.ToInt32(rd["id_prueba_encogimiento"]),
 
                         });
                     }
@@ -61,7 +61,7 @@ namespace Datos.Diseno
 
                 foreach (EPruebaEncogimiento itm in lstpruebaencogimiento)
                 {
-                    valoridencogimiento = itm.id_prueba_encogimiento;// se obtiene el id insertado para utilizarlo en el encabezado del registro
+                    valoridencogimiento = itm.id_encogimiento;// se obtiene el id insertado para utilizarlo en el encabezado del registro
                 }
 
                 List<EPruebaLavadoPilling> lstlavado = new List<EPruebaLavadoPilling>();
