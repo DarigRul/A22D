@@ -22,7 +22,7 @@ namespace Datos.Diseno
                 using (SqlConnection cn = DConexion.obtenerConexion()) // proceso para insercion tabla diseno_forros_prueba_encogimiento
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_encogimiento_registrar", cn) { CommandType = CommandType.StoredProcedure };
-                    comando.Parameters.Add("@ID_FORRO", SqlDbType.Int).Value = encogimiento.id_tela;
+                    comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = encogimiento.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = encogimiento.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = encogimiento.fecha_hora;
                     comando.Parameters.Add("@ID_ENTRETELA", SqlDbType.Int).Value = encogimiento.id_entretela;
@@ -69,19 +69,18 @@ namespace Datos.Diseno
                 using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para insersion tabla prueba de diseno_forros_prueba_lavado 
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_lavadopilling_registrar", cn) { CommandType = CommandType.StoredProcedure };
-                    comando.Parameters.Add("@ID_PRUEBA_LAVADOPILLING", SqlDbType.Int).Value = lavado.id_lavado;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = lavado.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = lavado.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = lavado.fecha;
                     comando.Parameters.Add("@LAVADO_HILO_FINAL", SqlDbType.Decimal).Value = lavado.lavado_hilo_final;
                     comando.Parameters.Add("@LAVADO_TRAMA_FINAL", SqlDbType.Decimal).Value = lavado.lavado_trama_final;
-                    comando.Parameters.Add("@LAVADO_HILO_DIFERENCIA", SqlDbType.Int).Value = lavado.lavado_hilo_diferencia;
+                    comando.Parameters.Add("@LAVADO_HILO_DIFERENCIA", SqlDbType.Decimal).Value = lavado.lavado_hilo_diferencia;
                     comando.Parameters.Add("@LAVADO_TRAMA_DIFERENCIA", SqlDbType.Decimal).Value = lavado.lavado_trama_diferencia;
-                    comando.Parameters.Add("@LAVADO_OBSERVACIONES", SqlDbType.Int).Value = lavado.lavado_observaciones;
-                    comando.Parameters.Add("@SOLIDEZ_COLOR", SqlDbType.Decimal).Value = lavado.solidez_color;
+                    comando.Parameters.Add("@LAVADO_OBSERVACIONES", SqlDbType.NVarChar).Value = lavado.lavado_observaciones;
+                    comando.Parameters.Add("@SOLIDEZ_COLOR", SqlDbType.Decimal).Value = lavado.solidez_calidad;
                     comando.Parameters.Add("@SOLIDEZ_OBSERVACIONES", SqlDbType.Decimal).Value = lavado.solidez_observaciones;
                     comando.Parameters.Add("@PILLING", SqlDbType.Decimal).Value = lavado.pilling;
-                    comando.Parameters.Add("@PILLING_OBSERVACIONES", SqlDbType.Decimal).Value = lavado.pilling_observacion;
+                    comando.Parameters.Add("@PILLING_OBSERVACIONES", SqlDbType.NVarChar).Value = lavado.pilling_observacion;
                     cn.Open();
                     SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
                     while (rd.Read())

@@ -20,7 +20,7 @@ namespace Entidades.Diseno.Calidad
         public double lavado_trama_diferencia { get; set; }
         // public double cm_trama_lavado { get; set; }
         public string lavado_observaciones  { get; set; }
-        public string solidez_color { get; set; }
+        public string solidez_calidad { get; set; }
         public string solidez_observaciones { get; set; }
         public string pilling { get; set; }
         public string pilling_observacion { get; set; }

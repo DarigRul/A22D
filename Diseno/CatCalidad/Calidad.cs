@@ -142,7 +142,10 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             {
 
             }
-            MessageBoxEx.Show(mensaje, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (bandera >= 1)
+            {
+                MessageBoxEx.Show(mensaje, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
