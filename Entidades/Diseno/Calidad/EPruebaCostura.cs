@@ -12,9 +12,9 @@ namespace Entidades.Diseno.Calidad
         public int id_tela { get; set; }
         public int id_operario { get; set; }
         public DateTime fecha { get; set; }
-        public double aguja { get; set; }
-        public double deslizamiento { get; set; }
-        public double deslizamientoobservaciones { get; set; }
+        public string aguja { get; set; }
+        public string deslizamiento { get; set; }
+        public string deslizamientoobservaciones { get; set; }
         public string rasgado { get; set; }
         public string rasgadoobservaciones { get; set; }
 

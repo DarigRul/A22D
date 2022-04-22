@@ -48,6 +48,7 @@
     <Compile Include="Diseno\Calidad\ECalidad.cs" />
     <Compile Include="Diseno\Calidad\EEntretelacombo.cs" />
     <Compile Include="Diseno\Calidad\EOperariocombo.cs" />
+    <Compile Include="Diseno\Calidad\EPruebaContaminacion.cs" />
     <Compile Include="Diseno\Calidad\EPruebaCostura.cs" />
     <Compile Include="Diseno\Calidad\EPruebaEncogimiento.cs" />
     <Compile Include="Diseno\Calidad\EPruebaLavadoPilling.cs" />
