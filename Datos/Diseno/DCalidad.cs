@@ -224,7 +224,7 @@ namespace Datos.Diseno
             try
             {
                 List<EPruebaEncogimiento> lstpruebaencogimiento = new List<EPruebaEncogimiento>();
-                using (SqlConnection cn = DConexion.obtenerConexion()) // proceso para insercion tabla diseno_forros_prueba_encogimiento
+                using (SqlConnection cn = DConexion.obtenerConexion()) // proceso para actualizacion tabla diseno_forros_prueba_encogimiento
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_encogimiento_actualizar", cn) { CommandType = CommandType.StoredProcedure };
                     comando.Parameters.Add("@ID_ENCOGIMIENTO", SqlDbType.Int).Value = encogimiento.id_encogimiento;
@@ -272,9 +272,10 @@ namespace Datos.Diseno
 
                 List<EPruebaLavadoPilling> lstlavado = new List<EPruebaLavadoPilling>();
 
-                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para insersion tabla prueba de diseno_telas_prueba_lavado 
+                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para actualizacion tabla prueba de diseno_telas_prueba_lavado 
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_lavadopilling_actualizar", cn) { CommandType = CommandType.StoredProcedure };
+                    comando.Parameters.Add("@ID_LAVADO", SqlDbType.Int).Value = lavado.id_lavado;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = actualiza.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = lavado.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = lavado.fecha;
@@ -308,9 +309,10 @@ namespace Datos.Diseno
                 //proceso para insertar costura
                 List<EPruebaCostura> lstcostura = new List<EPruebaCostura>();
 
-                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para insersion tabla prueba de diseno_telas_prueba_costura 
+                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para actualizar tabla prueba de diseno_telas_prueba_costura 
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_costura_actualizar", cn) { CommandType = CommandType.StoredProcedure };
+                    comando.Parameters.Add("@ID_COSTURA", SqlDbType.Int).Value = costura.id_costura;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = actualiza.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = costura.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = costura.fecha;
@@ -344,9 +346,10 @@ namespace Datos.Diseno
 
                 List<EPruebaContaminacion> lstcontaminacion = new List<EPruebaContaminacion>();
 
-                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para insersion tabla prueba de diseno_telas_prueba_contaminacion 
-                {
+                using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para actualizar tabla prueba de diseno_telas_prueba_contaminacion 
+                { 
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_contaminacion_actualizar", cn) { CommandType = CommandType.StoredProcedure };
+                    comando.Parameters.Add("@ID_CONTAMINACION", SqlDbType.Int).Value = contaminacion.id_tela;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = actualiza.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = contaminacion.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = contaminacion.fecha;
