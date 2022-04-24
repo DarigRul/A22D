@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Datos",
+    "\\Datos\\Diseno",
     "\\Diseno",
     "\\Diseno\\CatCalidad"
   ],
-  "SelectedNode": "\\ALTIMA ERP 2022.sln",
+  "SelectedNode": "\\Diseno\\CatCalidad\\CatalogoCalidad.cs",
   "PreviewInSolutionExplorer": false
 }
