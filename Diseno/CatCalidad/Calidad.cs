@@ -128,18 +128,21 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                 mensaje += "La pestaña prueba contaminación en combinación de telas no ha sido completada, contiene errores por favor verifique.\n";
             }
             if (dtiFechaEncogimiento.Text == string.Empty && dtiLavadoFecha.Text == string.Empty && dtiCosturaFecha.Text == string.Empty && dtiContaminacionFecha.Text == string.Empty)
-            { 
+            {
+                mensaje += "Los campos de fechas no tienen el formato correcot, por favor verifique.\n";
                 MessageBoxEx.Show(mensaje, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
                 if (bandera >= 1)
                 {
                     MessageBoxEx.Show(mensaje, "Error, por favor verifique", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
                 else
                 {
-                    EPruebaEncogimiento encogimiento = new EPruebaEncogimiento();
+                    EPruebaEncogimiento encogimiento = new EPruebaEncogimiento();//asignacion a objeto con componentes  para insercion de encogimiento
                     encogimiento.id_tela = Convert.ToInt16(cmbTelaEncogimiento.SelectedValue);
                     encogimiento.id_operario = Convert.ToInt16(cmbOperarioEncogimiento.SelectedValue);
                     encogimiento.fecha_hora = Convert.ToDateTime(dtiFechaEncogimiento.Text);
@@ -155,8 +158,44 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                     encogimiento.vapor_trama_diferencia = Convert.ToDouble(txtVaporTramaDiferencia.Text);
                     encogimiento.vapor_observaciones = txtVaporObservaciones.Text;
                     encogimiento.fusion_hilo_final = Convert.ToDouble(txtFusionHiloFinal.Text);
-                    encogimiento.fusion_trama_final =Convert.ToDouble(txtFusionTramaFinal.Text);
-                
+                    encogimiento.fusion_trama_final = Convert.ToDouble(txtFusionTramaFinal.Text);
+                    encogimiento.fusion_hilo_diferencia = Convert.ToDouble(txtFusionHiloDiferencia.Text);
+                    encogimiento.fusion_trama_diferencia = Convert.ToDouble(txtFusionTramaDiferencia.Text);
+                    encogimiento.fusion_observaciones = txtFusionObservaciones.Text;
+                    encogimiento.plancha_hilo_final = Convert.ToDouble(txtPlanchaHiloFinal.Text);
+                    encogimiento.plancha_trama_final = Convert.ToDouble(txtPlanchaTramaFinal.Text);
+                    encogimiento.plancha_hilo_diferencia = Convert.ToDouble(txtPlanchaHiloDiferencia.Text);
+                    encogimiento.plancha_trama_diferencia = Convert.ToDouble(txtPlanchaTramaDiferencia.Text);
+                    encogimiento.plancha_obvservaciones = txtPlanchaObservaciones.Text;
+
+                    EPruebaLavadoPilling lavado = new EPruebaLavadoPilling(); //asignacion a objeto con componentes  para insercion de lavado y pilling
+                    lavado.id_tela = Convert.ToInt16(cmbLavadoEntretela.SelectedValue);
+                    lavado.id_operario = Convert.ToInt16(cmbLavadoOperario.SelectedValue);
+                    lavado.fecha = Convert.ToDateTime(dtiLavadoFecha.Text);
+                    lavado.lavado_hilo_final = Convert.ToInt16(txtLavadoHiloFinal.Text);
+                    lavado.lavado_trama_final = Convert.ToInt16(txtLavadoTramaFinal.Text);
+                    lavado.lavado_hilo_diferencia = Convert.ToInt16(txtLavadoHiloDiferencia.Text);
+                    lavado.lavado_trama_diferencia = Convert.ToInt16(txtLavadoTramaDiferencia.Text);
+                    lavado.lavado_observaciones = txtLavadoObservaciones.Text;
+                    lavado.solidez_observaciones = txtSolidezObservaciones.Text;
+                    lavado.solidez_calidad = Convert.ToString(cmbSolidezCalidad.SelectedValue);
+                    lavado.pilling = Convert.ToString(cboresultadopilling.SelectedValue);
+                    lavado.pilling_observacion = txtPillingObservaciones.Text;
+
+                    EPruebaCostura costura = new EPruebaCostura(); //asignacion a objeto con componentes  para insercion de prueba costura
+                    costura.id_operario = Convert.ToInt16(cmbCosturaOperario.SelectedValue);
+                    costura.fecha = Convert.ToDateTime(dtiCosturaFecha.Text);
+                    costura.aguja = Convert.ToString(cmbCosturaAguja.SelectedValue);
+                    costura.deslizamiento = Convert.ToString(cmbDeslizamiento.SelectedValue);
+                    costura.deslizamientoobservaciones = Convert.ToString(txtDeslizamientoObservaciones.Text);
+                    costura.rasgado = Convert.ToString(cborasgadotela.SelectedValue);
+                    costura.rasgadoobservaciones = Convert.ToString(txtRasgadoObservaciones.Text);
+
+                    EPruebaContaminacion contaminacion = new EPruebaContaminacion(); //asignacion a objeto con componentes  para insercion de prueba contaminacion en combinacion telas
+                    contaminacion.id_operario = Convert.ToInt16(cmbCosturaOperario.SelectedValue);
+                    contaminacion.fecha = Convert.ToDateTime(dtiContaminacionFecha.Text);
+                    contaminacion.contaminacion = Convert.ToString(cmbContaminacionCalidad.SelectedValue);
+                    contaminacion.observaciones = Convert.ToString(txtContaminacionObservaciones.Text);
                 }  
             }
 

@@ -435,6 +435,42 @@ C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\obj\Debug\ALTIMA ERP 2022.cspro
 C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\obj\Debug\ALTIMA ERP 2022.csproj.CopyComplete
 C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\obj\Debug\ALTIMA ERP 2022.exe
 C:\Users\GIOVANNI M\Documents\ALTIMA\FULLPROYECT\obj\Debug\ALTIMA ERP 2022.pdb
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ALTIMA ERP 2022.exe.config
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ALTIMA ERP 2022.exe
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ALTIMA ERP 2022.pdb
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Datos.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Entidades.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Newtonsoft.Json.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Renci.SshNet.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\stdole.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Datos.pdb
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Entidades.pdb
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Renci.SshNet.xml
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA ERP 2022.csproj.AssemblyReference.cache
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA ERP 2022.csproj.SuggestedBindingRedirects.cache
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA_ERP_2022.Comercial.Muestrario.CatalogoMuestrario.resources
@@ -506,42 +542,6 @@ C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA_ERP_2022.Usuarios.Roles.C
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA_ERP_2022.Utilitarios.Historico.Historico.resources
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA ERP 2022.csproj.GenerateResource.cache
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA ERP 2022.csproj.CoreCompileInputs.cache
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ALTIMA ERP 2022.exe.config
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ALTIMA ERP 2022.exe
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ALTIMA ERP 2022.pdb
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\AxShockwaveFlashObjects.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Datos.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar2.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.Instrumentation.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Entidades.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Newtonsoft.Json.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Renci.SshNet.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\ShockwaveFlashObjects.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\stdole.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Datos.pdb
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Entidades.pdb
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.DotNetBar2.xml
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\DevComponents.Instrumentation.xml
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Newtonsoft.Json.xml
-C:\Users\GIOVANNI M\Source\Repos\A22D\bin\Debug\Renci.SshNet.xml
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA ERP 2022.csproj.CopyComplete
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA ERP 2022.exe
 C:\Users\GIOVANNI M\Source\Repos\A22D\obj\Debug\ALTIMA ERP 2022.pdb
