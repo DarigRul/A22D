@@ -33,7 +33,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
         int pEnc, pLav, pCost, pCont = 0;
         public ETelas TelasGenarl;
 
-       
+
 
         public Calidad(ETelas tela)
         {
@@ -107,7 +107,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             Boolean combo4 = validatab4();
             int bandera = 0;
             string mensaje = "";
-            if (valida1 != "" || combo1  == false)//proceso para validar si el tab 1 es correcto para actualizar informacion
+            if (valida1 != "" || combo1 == false)//proceso para validar si el tab 1 es correcto para actualizar informacion
             {
                 bandera += 1;
                 mensaje += "La pestaña prueba encogimiento no ha sido completada, contiene errores por favor verifique.\n";
@@ -117,12 +117,12 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                 bandera += 1;
                 mensaje += "La pestaña prueba lavado y pilling no ha sido completada, contiene errores por favor verifique.\n";
             }
-            if (combo3 ==false)
+            if (combo3 == false)
             {
                 bandera += 1;
                 mensaje += "La pestaña prueba costura no ha sido completada, contiene errores por favor verifique.\n";
             }
-            if (combo4 ==false)
+            if (combo4 == false)
             {
                 bandera += 1;
                 mensaje += "La pestaña prueba contaminación en combinación de telas no ha sido completada, contiene errores por favor verifique.\n";
@@ -142,6 +142,30 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                 }
                 else
                 {
+                    List<ERegistroTelasCalidad> lstregistrotelacalidad = new List<ERegistroTelasCalidad>();
+                    lstregistrotelacalidad = DCalidad.GetConsultaConregistroCalidad(TelasGenarl);
+                    string Movimiento = "";
+                    int id_encogimiento = 0;
+                    int id_lavado = 0;
+                    int id_costura = 0;
+                    int id_contaminacion = 0;
+                    if (lstregistrotelacalidad.Count == 0)
+                    {
+                        Movimiento = "Alta";
+                    }
+                    else
+                    {
+                        foreach (ERegistroTelasCalidad itm in lstregistrotelacalidad)
+                        {
+                            id_encogimiento = itm.id_prueba_encogimiento;
+                            id_lavado = itm.id_prueba_lavado_pilling;
+                            id_costura = itm.id_prueba_costura;
+                            id_contaminacion = itm.id_prueba_contaminacion_telas;
+                        }
+
+                        Movimiento = "Modificacion";
+                    }
+
                     EPruebaEncogimiento encogimiento = new EPruebaEncogimiento();//asignacion a objeto con componentes  para insercion de encogimiento
                     encogimiento.id_tela = Convert.ToInt16(cmbTelaEncogimiento.SelectedValue);
                     encogimiento.id_operario = Convert.ToInt16(cmbOperarioEncogimiento.SelectedValue);
@@ -169,6 +193,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                     encogimiento.plancha_obvservaciones = txtPlanchaObservaciones.Text;
 
                     EPruebaLavadoPilling lavado = new EPruebaLavadoPilling(); //asignacion a objeto con componentes  para insercion de lavado y pilling
+
                     lavado.id_tela = Convert.ToInt16(cmbLavadoEntretela.SelectedValue);
                     lavado.id_operario = Convert.ToInt16(cmbLavadoOperario.SelectedValue);
                     lavado.fecha = Convert.ToDateTime(dtiLavadoFecha.Text);
@@ -196,7 +221,49 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                     contaminacion.fecha = Convert.ToDateTime(dtiContaminacionFecha.Text);
                     contaminacion.contaminacion = Convert.ToString(cmbContaminacionCalidad.SelectedValue);
                     contaminacion.observaciones = Convert.ToString(txtContaminacionObservaciones.Text);
-                }  
+
+                    if (Movimiento == "Modificacion")
+                    {
+                        encogimiento.id_encogimiento = id_encogimiento;
+                        lavado.id_lavado = id_lavado;
+                        costura.id_costura = id_costura;
+                        contaminacion.id_contaminacion = id_contaminacion;
+                    }
+                    if (Movimiento == "Alta")
+                    {
+                        try
+                        {
+                            DCalidad.SetInsertarCalidad(TelasGenarl, encogimiento, lavado, costura, contaminacion);
+
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                    if (Movimiento == "Modificacion")
+                    {
+                        ERegistroTelasCalidad obj = new ERegistroTelasCalidad();
+                        foreach (ERegistroTelasCalidad itm in lstregistrotelacalidad)
+                        {
+                            obj.id_tela = itm.id_tela;
+                            obj.id_prueba_contaminacion_telas = itm.id_prueba_contaminacion_telas;
+                            obj.id_prueba_costura = itm.id_prueba_costura;
+                            obj.id_prueba_encogimiento = itm.id_prueba_encogimiento;
+                            obj.id_prueba_lavado_pilling = itm.id_prueba_lavado_pilling;
+                            break;
+                        }
+                        try
+                        {
+                            DCalidad.SetActualizarDisenoCalidad(obj, encogimiento, lavado, costura, contaminacion);
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+
+                }
             }
 
         }
@@ -278,7 +345,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             {
                 cadena += "  Error, validación en campo presión, verifique.\n";
             }
-         
+
             if (!double.TryParse(txtFusionHiloFinal.Text, out medidafusionhilofinal))
             {
                 cadena += "  Error, validación en campo fusión hilo final, verifique.\n";
@@ -323,7 +390,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             double lavadoobservaciones;
             double solidezobservacion;
             double pillingobservacion;
-           
+
             if (!double.TryParse(txtLavadoHiloFinal.Text, out finallavado))
             {
                 cadena += "  Error, validación en campo lavado hilo final, verifique.\n";
@@ -342,49 +409,10 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             }
             return cadena;
         }
-      
 
 
-    
 
-        //private bool ValidaCampoEncogimiento()
-        //{
 
-        //    try
-        //    {
-        //        if (Txt1Adherenciaencogimiento.Text == "" && Txt1Temperaturaencogimiento.Text == "" && Txt1Tiempoencogimiento.Text == "" && Txt1Presionencogimiento.Text == "" && Txt1FinalHiloVaporencogimiento.Text == "" &&
-        //            Txt1Finaltramavaporencogimiento.Text == "" && Txt1DifHiloResultadoencogimiento.Text == "" && Txt1DifHilocmencogimiento.Text == "" && Txt1Diferenciatramaencogimiento.Text == "" && Txt1Diferenciatramacmencogimiento.Text == ""
-        //            && txt1observacionesvaporencogimiento.Text == "" && Txt1MedidaFinalHiloFisionencogimiento.Text == "" && Txt1MedidaFinalTramaFisionencogimiento.Text == "" &&
-        //            Txt1DiferenciaHiloFisionencogimiento.Text == "" && Txt1CMFisionencogimiento.Text == "" && Txt1TramaFisionencogimiento.Text == "" && Txt1CMfisionPruebaencogimiento.Text == "" && Txt1Observacionesfisionencogimiento.Text == "" && Txt1MedidaFinalHiloVaporencogimiento.Text == "" &&
-        //            Txt1MedidafinaltramaVaporencogimiento.Text == "" && Txtdiferenciahilovaporencogimiento.Text == "" && Txt1CMHiloVaporencogimiento.Text == "" && Txt1DiferenciaTramaVaporencogimiento.Text == "" && Txt1CMTramaVaporencogimiento.Text == "" && Txt1ObservacionesplanchaVaporencogimiento.Text == ""
-        //            )
-        //        {
-        //            return false;
-        //        }
-
-        //        try
-        //        {
-        //            if (Cbo1Telaencogimiento.SelectedValue != null && Cbo1Operarioencogimiento.SelectedValue != null && cbo1Entretelaencogimiento.SelectedValue != null && cbo1proveedorencogimiento.SelectedValue != null)
-        //            {
-        //                return true;
-        //            }
-        //            else
-        //            {
-        //                return false;
-        //            }
-
-        //        }
-        //        catch (Exception)
-        //        {
-
-        //            return false;
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //    }
-        //}
 
         private bool ValidaEncogimiento()
         {
@@ -392,37 +420,37 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             {
                 MessageBoxEx.Show("Seleccione el operario", "Operario no válido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbOperarioEncogimiento.Focus();
-                return false; 
+                return false;
             }
-            else if(dtiFechaEncogimiento.Text == string.Empty)
+            else if (dtiFechaEncogimiento.Text == string.Empty)
             {
                 MessageBoxEx.Show("Capture la fecha de prueba de encogimiento", "Fecha no válida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dtiFechaEncogimiento.Focus();
-                return false; 
+                return false;
             }
-            else if(cmbTelaEncogimiento.SelectedIndex == -1)
+            else if (cmbTelaEncogimiento.SelectedIndex == -1)
             {
                 MessageBoxEx.Show("Seleccione el material", "Tela no válida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbTelaEncogimiento.Focus();
-                return false; 
+                return false;
             }
             else
             {
-                return true; 
+                return true;
             }
         }
 
         private EForrosEncogimiento DatosEncogimiento()
         {
             EForrosEncogimiento enc = new EForrosEncogimiento();
-            enc.id_operario = Convert.ToInt32(cmbOperarioEncogimiento.SelectedValue); 
+            enc.id_operario = Convert.ToInt32(cmbOperarioEncogimiento.SelectedValue);
             enc.id_entretela = Convert.ToInt32(cmbTelaEncogimiento.SelectedValue);
             enc.fecha_hora = dtiFechaEncogimiento.Value;
             enc.adherencia = txtVaporAdherencia.Value;
-            enc.tiempo = txtVaporTiempo.Value; 
+            enc.tiempo = txtVaporTiempo.Value;
             enc.temperatura = txtVaporTemperatura.Value;
             enc.presion = txtVaporPresion.Value;
-            enc.vapor_hilo_final = txtVaporHiloFinal.Value; 
+            enc.vapor_hilo_final = txtVaporHiloFinal.Value;
             enc.vapor_trama_final = txtVaporTramaFinal.Value;
             enc.vapor_hilo_diferencia = txtVaporHiloDiferencia.Value;
             enc.vapor_trama_diferencia = txtVaporTramaDiferencia.Value;
@@ -430,7 +458,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
 
             enc.fusion_hilo_diferencia = txtFusionHiloDiferencia.Value;
             enc.fusion_trama_diferencia = txtFusionTramaDiferencia.Value;
-            enc.fusion_hilo_final = txtFusionHiloFinal.Value; 
+            enc.fusion_hilo_final = txtFusionHiloFinal.Value;
             enc.fusion_trama_final = txtFusionTramaFinal.Value;
             enc.fusion_observaciones = txtFusionObservaciones.Text;
 
@@ -441,7 +469,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             enc.plancha_observaciones = txtPlanchaObservaciones.Text;
 
             enc.id_encogimiento = pEnc;
-            enc.id_forro = forro.id_forro; 
+            enc.id_forro = forro.id_forro;
 
             return enc;
         }
@@ -449,28 +477,38 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
 
         public void Cargar()
         {
-           
-                cargarcombos();
+
+            cargarcombos();
             limpiartextbox();
         }
 
-   
 
-        public void cargarcombos() 
+
+        public void cargarcombos()
         {
             lblDescripcion.Text = TelasGenarl.descripcion;
             lblProveedor.Text = TelasGenarl.auxid_proveedor;
             lblClaveProveedor.Text = TelasGenarl.clave_proveedor;
 
             //Importar las entretelas 
+            List<ERegistroTelasCalidad> lstregistrotelacalidad = new List<ERegistroTelasCalidad>();
+            lstregistrotelacalidad = DCalidad.GetConsultaConregistroCalidad(TelasGenarl);
+            string Movimiento = "";
+            if (lstregistrotelacalidad.Count == 0)
+            {
+                Movimiento = "Alta";
+            }
+            else
+            {
+                Movimiento = "Modificacion";
+            }
 
             List<ETelas> lsttelasencogimiento = new List<ETelas>();
             lsttelasencogimiento = DTelas.GetConsultaDisenoTelas();
             cmbTelaEncogimiento.DataSource = lsttelasencogimiento;
-            cmbTelaEncogimiento.SelectedIndex = 0;
             cmbTelaEncogimiento.DisplayMember = "descripcion";
             cmbTelaEncogimiento.ValueMember = "id_tela";
-           
+
             List<EOperariocombo> lstOperario = new List<EOperariocombo>();
             lstOperario = DCalidad.GetLlenarComboOperario();
             cmbOperarioEncogimiento.DataSource = lstOperario;
@@ -487,7 +525,6 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             List<ETelas> lsttelaslavado = new List<ETelas>();
             lsttelaslavado = DTelas.GetConsultaDisenoTelas();
             cmbLavadoEntretela.DataSource = lsttelaslavado;
-            cmbLavadoEntretela.SelectedIndex = 0;
             cmbLavadoEntretela.DisplayMember = "descripcion";
             cmbLavadoEntretela.ValueMember = "id_tela";
 
@@ -518,10 +555,9 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             cmbCosturaEntretela.DisplayMember = "descripcion";
             cmbCosturaEntretela.ValueMember = "id_tela";
 
-            cmbCosturaEntretela.SelectedIndex = 0;
 
-            List<EOperariocombo> lstcostura = new List<EOperariocombo>(); 
-          
+            List<EOperariocombo> lstcostura = new List<EOperariocombo>();
+
             lstcostura = DCalidad.GetLlenarComboOperario();
             cmbCosturaOperario.DataSource = lstcostura;
             cmbCosturaOperario.DisplayMember = "descripcion";
@@ -544,7 +580,6 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             List<ETelas> lsttelascontaminacion = new List<ETelas>();
             lsttelascontaminacion = DTelas.GetConsultaDisenoTelas();
             cmbContaminacionEntretela.DataSource = lsttelascontaminacion;
-            cmbContaminacionEntretela.SelectedIndex = 0;
             cmbContaminacionEntretela.DisplayMember = "descripcion";
             cmbContaminacionEntretela.ValueMember = "id_tela";
 
@@ -561,58 +596,74 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             string[] calidadcontamiancion = { "Buena", "Regular", "Mala" };
             cmbContaminacionCalidad.DataSource = calidadcontamiancion;
             cmbContaminacionCalidad.SelectedIndex = 0;
-            //dtEntretelaEncogimiento = DForros.ImportaEntretelas();
-            //dtEntretelaLavado = DForros.ImportaEntretelas();
-            //dtEntretelaContaminacion = DForros.ImportaEntretelas();
-            //dtEntretelaCostura = DForros.ImportaEntretelas();
 
-            //cmbTelaEncogimiento.DataSource = dtEntretelaEncogimiento;
-            //cmbTelaEncogimiento.DisplayMember = "nombre";
-            //cmbTelaEncogimiento.ValueMember = "id_material";
-            //cmbTelaEncogimiento.SelectedIndex = 0;
+            //seleccionar index de tela
+            int telatab1 = 0;
+            int telatab2 = 0;
+            int telatab3 = 0;
+            int telatab4 = 0;
+            foreach (ETelas itm in lsttelasencogimiento)
+            {
+                telatab1 += 1;
+                if (itm.id_tela == TelasGenarl.id_tela)
+                {
+                    cmbTelaEncogimiento.SelectedIndex = telatab1 - 1;
+                }
+            }
 
-            //cmbLavadoEntretela.DataSource = dtEntretelaLavado;
-            //cmbLavadoEntretela.DisplayMember = "nombre";
-            //cmbLavadoEntretela.ValueMember = "id_material";
-            //cmbLavadoEntretela.SelectedIndex = 0;
+            foreach (ETelas itm2 in lsttelaslavado)
+            {
+                telatab2 += 1;
+                if (itm2.id_tela == TelasGenarl.id_tela)
+                {
+                    cmbLavadoEntretela.SelectedIndex = telatab2 - 1;
+                }
 
-            //cmbCosturaEntretela.DataSource = dtEntretelaCostura;
-            //cmbCosturaEntretela.DisplayMember = "nombre";
-            //cmbCosturaEntretela.ValueMember = "id_material";
-            //cmbCosturaEntretela.SelectedIndex =0;
+            }
+            foreach(ETelas itm3 in lstcosturatela)
+            {
+                telatab3 += 1;
+                if (itm3.id_tela == TelasGenarl.id_tela)
+                {
+                    cmbCosturaEntretela.SelectedIndex = telatab3 - 1;
+                }
+            }
 
-            //cmbContaminacionEntretela.DataSource = dtEntretelaContaminacion;
-            //cmbContaminacionEntretela.DisplayMember = "nombre";
-            //cmbContaminacionEntretela.ValueMember = "id_material";
-            //cmbContaminacionEntretela.SelectedIndex =0;
+            foreach (ETelas itm4 in lsttelascontaminacion)
+            {
+                telatab4 += 1;
+                if (itm4.id_tela == TelasGenarl.id_tela)
+                {
+                    cmbContaminacionEntretela.SelectedIndex = telatab4 - 1;
+                }
+            }
+            if (Movimiento == "Modificacion")
+            {
+                List<ERegistroTelasCalidad> lst = new List<ERegistroTelasCalidad>();
+                ERegistroTelasCalidad obj = new ERegistroTelasCalidad();
+                lst = DCalidad.GetConsultaConregistroCalidad(TelasGenarl);
+                foreach(ERegistroTelasCalidad itm in lst)
+                {
+                    obj.id_tela = itm.id_tela;
+                    obj.id_prueba_encogimiento = itm.id_prueba_encogimiento;    
+                    obj.id_prueba_costura = itm.id_prueba_costura;
+                    obj.id_prueba_lavado_pilling = itm.id_prueba_lavado_pilling;    
+                    obj.id_prueba_contaminacion_telas=itm.id_prueba_contaminacion_telas;
+                    obj.encogimiento = itm.encogimiento;
+                    obj.lavadoPilling = itm.lavadoPilling; 
+                    obj.costura=itm.costura;
+                    obj.contaminacion = itm.contaminacion;
+                    break;
+                }
+                txtVaporAdherencia.Text =Convert.ToString(obj.encogimiento.adherencia);
 
-            ////Importar operarios y asignamos a los combos
-            //dtOperariosEncogimiento = DForros.ImportaOperarios();
-            //dtOperariosLavado = DForros.ImportaOperarios();
-            //dtOperariosContaminacion = DForros.ImportaOperarios();
-            //dtOperariosCostura = DForros.ImportaOperarios();
-
-            //cmbOperarioEncogimiento.DataSource = dtOperariosEncogimiento;
-            //cmbOperarioEncogimiento.DisplayMember = "Nombre";
-            //cmbOperarioEncogimiento.ValueMember = "ClaveEmpleado";
-            //cmbOperarioEncogimiento.SelectedIndex = 0;
-
-            //cmbContaminacionOperario.DataSource = dtOperariosContaminacion;
-            //cmbContaminacionOperario.DisplayMember = "Nombre";
-            //cmbContaminacionOperario.ValueMember = "ClaveEmpleado";
-            //cmbContaminacionOperario.SelectedIndex = 0;
-
-            //cmbLavadoOperario.DataSource = dtOperariosLavado;
-            //cmbLavadoOperario.DisplayMember = "Nombre";
-            //cmbLavadoOperario.ValueMember = "ClaveEmpleado";
-            //cmbLavadoOperario.SelectedIndex =0;
-
-            //cmbCosturaOperario.DataSource = dtOperariosCostura;
-            //cmbCosturaOperario.DisplayMember = "Nombre";
-            //cmbCosturaOperario.ValueMember = "ClaveEmpleado";
-            //cmbCosturaOperario.SelectedIndex = 0;
-
-
+            }
+            else
+            {
+                limpiartextbox();
+            }    
+            
+           
         }
 
         public void limpiartextbox()
@@ -622,23 +673,35 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
             txtVaporTemperatura.Text = "0.00";
             txtVaporPresion.Text = "0.00";
             txtVaporHiloFinal.Text = "0.00";
+            txtVaporTramaFinal.Text = "0.00";
             txtVaporHiloDiferencia.Text = "0.00";
             txtVaporTramaDiferencia.Text = "0.00";
+            txtVaporObservaciones.Text = "";
+            txtFusionHiloFinal.Text = "0.00";
             txtFusionTramaFinal.Text = "0.00";
             txtFusionHiloDiferencia.Text = "0.00";
             txtFusionTramaDiferencia.Text = "0.00";
-            txtPlanchaHiloFinal.Text = "0.00";
+            txtFusionObservaciones.Text = "";
             txtPlanchaHiloFinal.Text = "0.00";
             txtPlanchaHiloDiferencia.Text = "0.00";
             txtPlanchaTramaFinal.Text = "0.00";
             txtPlanchaTramaDiferencia.Text = "0.00";
-            txtFusionHiloFinal.Text = "0.00";
-            txtVaporTramaFinal.Text = "0.00";
+            txtPlanchaObservaciones.Text = "";
+
             txtLavadoHiloFinal.Text = "0.00";
             txtLavadoHiloDiferencia.Text = "0.00";
 
+            txtLavadoHiloFinal.Text = "0.00";
+            txtLavadoHiloDiferencia.Text = "0.00";
             txtLavadoTramaFinal.Text = "0.00";
             txtLavadoTramaDiferencia.Text = "0.00";
+            txtLavadoObservaciones.Text = "";
+            txtSolidezObservaciones.Text = "";
+            txtPillingObservaciones.Text = "";
+
+            txtDeslizamientoObservaciones.Text = "";
+            txtRasgadoObservaciones.Text = "";
+            txtContaminacionObservaciones.Text = "";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

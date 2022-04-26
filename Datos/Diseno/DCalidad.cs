@@ -162,27 +162,25 @@ namespace Datos.Diseno
 
                 foreach (EPruebaContaminacion itm in lstcontaminacion)
                 {
-                    valoridlavadocostura = itm.id_contaminacion;// se obtiene el id insertado para utilizarlo en el encabezado del registro
+                    valoridcontaminacion = itm.id_contaminacion;// se obtiene el id insertado para utilizarlo en el encabezado del registro
                 }
 
 
 
 
 
-                ////proceso para insertar nuevo registro a diseno_calidad
-                //using (SqlConnection cn = DConexion.obtenerConexion())
-                //{
-                //    SqlCommand comando = new SqlCommand("diseno_calidad_registrar", cn) { CommandType = CommandType.StoredProcedure };
-                //    comando.Parameters.Add("@NOMBRE", SqlDbType.NVarChar).Value = inserta.nombre;
-                //    comando.Parameters.Add("@CLAVE", SqlDbType.NVarChar).Value = inserta.clave;
-                //    comando.Parameters.Add("@DETALLE", SqlDbType.NVarChar).Value = inserta.detalle;
-                //    comando.Parameters.Add("@ID_PRUEBA_ENCOGIMIENTO", SqlDbType.Int).Value = valoridencogimiento;
-                //    comando.Parameters.Add("@ID_PRUEBA_LAVADO_PILLING", SqlDbType.Int).Value = valoridlavado;
-                //    comando.Parameters.Add("@ID_PRUEBA_LAVADO_COSTURA", SqlDbType.Int).Value = valoridlavadocostura;
-                //    comando.Parameters.Add("@ID_PRUEBA_CONTAMINACION_COMBINACIONTELAS", SqlDbType.Int).Value = inserta.id_prueba_contaminacion_combinaciontelas;
-                //    cn.Open();
-                //    comando.ExecuteNonQuery();
-                //}
+                //proceso para insertar nuevo registro a diseno_calidad
+                using (SqlConnection cn = DConexion.obtenerConexion())
+                {
+                    SqlCommand comando = new SqlCommand("diseno_telas_pruebas_calidad_registrar", cn) { CommandType = CommandType.StoredProcedure };
+                    comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = inserta.id_tela;
+                    comando.Parameters.Add("@ID_PRUEBA_ENCOGIMIENTO", SqlDbType.Int).Value = valoridencogimiento;
+                    comando.Parameters.Add("@ID_PRUEBA_LAVADO_PILLING", SqlDbType.Int).Value = valoridlavado;
+                    comando.Parameters.Add("@ID_PRUEBA_LAVADO_COSTURA", SqlDbType.Int).Value = valoridlavadocostura;
+                    comando.Parameters.Add("@ID_PRUEBA_CONTAMINACION_COMBINACIONTELAS", SqlDbType.Int).Value = valoridcontaminacion;
+                    cn.Open();
+                    comando.ExecuteNonQuery();
+                }
                 //List<ECalidad> lstCalidad = new List<ECalidad>();
                 //using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para obtener el registro (id_calidad) previo insertado
                 //{
@@ -215,19 +213,14 @@ namespace Datos.Diseno
                 return 0;
             }
         }
-        public static int SetActualizarDisenoCalidad(ETelas actualiza, EPruebaEncogimiento encogimiento, EPruebaLavadoPilling lavado, EPruebaCostura costura, EPruebaContaminacion contaminacion)
+        public static int SetActualizarDisenoCalidad(ERegistroTelasCalidad actualiza, EPruebaEncogimiento encogimiento, EPruebaLavadoPilling lavado, EPruebaCostura costura, EPruebaContaminacion contaminacion)
         {
-            int valoridencogimiento = 0;
-            int valoridlavado = 0;
-            int valoridlavadocostura = 0;
-            int valoridcontaminacion = 0;
             try
             {
-                List<EPruebaEncogimiento> lstpruebaencogimiento = new List<EPruebaEncogimiento>();
                 using (SqlConnection cn = DConexion.obtenerConexion()) // proceso para actualizacion tabla diseno_forros_prueba_encogimiento
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_encogimiento_actualizar", cn) { CommandType = CommandType.StoredProcedure };
-                    comando.Parameters.Add("@ID_ENCOGIMIENTO", SqlDbType.Int).Value = encogimiento.id_encogimiento;
+                    comando.Parameters.Add("@ID_ENCOGIMIENTO", SqlDbType.Int).Value = actualiza.id_prueba_encogimiento;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = actualiza.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = encogimiento.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = encogimiento.fecha_hora;
@@ -253,29 +246,15 @@ namespace Datos.Diseno
                     comando.Parameters.Add("@PLANCHATRAMADIFERENCIA", SqlDbType.Decimal).Value = encogimiento.plancha_trama_diferencia;
                     comando.Parameters.Add("@PLANCHAOBSERVACIONES", SqlDbType.NVarChar).Value = encogimiento.plancha_obvservaciones;
                     cn.Open();
-                    SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
-                    while (rd.Read())
-                    {
-                        lstpruebaencogimiento.Add(new EPruebaEncogimiento
-                        {
-                            id_encogimiento = DBNull.Value.Equals(rd["id_prueba_encogimiento"]) ? 0 : Convert.ToInt32(rd["id_prueba_encogimiento"]),
-
-                        });
-                    }
+                    comando.ExecuteNonQuery();
 
                 }
 
-                foreach (EPruebaEncogimiento itm in lstpruebaencogimiento)
-                {
-                    valoridencogimiento = itm.id_encogimiento;// se obtiene el id insertado para utilizarlo en el encabezado del registro
-                }
-
-                List<EPruebaLavadoPilling> lstlavado = new List<EPruebaLavadoPilling>();
 
                 using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para actualizacion tabla prueba de diseno_telas_prueba_lavado 
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_lavadopilling_actualizar", cn) { CommandType = CommandType.StoredProcedure };
-                    comando.Parameters.Add("@ID_LAVADO", SqlDbType.Int).Value = lavado.id_lavado;
+                    comando.Parameters.Add("@ID_LAVADO", SqlDbType.Int).Value = actualiza.id_prueba_lavado_pilling;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = actualiza.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = lavado.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = lavado.fecha;
@@ -289,30 +268,15 @@ namespace Datos.Diseno
                     comando.Parameters.Add("@PILLING", SqlDbType.NVarChar).Value = lavado.pilling;
                     comando.Parameters.Add("@PILLING_OBSERVACIONES", SqlDbType.NVarChar).Value = lavado.pilling_observacion;
                     cn.Open();
-                    SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
-                    while (rd.Read())
-                    {
-                        lstlavado.Add(new EPruebaLavadoPilling
-                        {
-                            id_lavado = DBNull.Value.Equals(rd["id_lavado"]) ? 0 : Convert.ToInt32(rd["id_lavado"]),
-
-                        });
-                    }
+                    comando.ExecuteNonQuery();
 
                 }
 
-                foreach (EPruebaLavadoPilling itm in lstlavado)
-                {
-                    valoridlavado = itm.id_lavado;// se obtiene el id insertado para utilizarlo en el encabezado del registro
-                }
-
-                //proceso para insertar costura
-                List<EPruebaCostura> lstcostura = new List<EPruebaCostura>();
 
                 using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para actualizar tabla prueba de diseno_telas_prueba_costura 
                 {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_costura_actualizar", cn) { CommandType = CommandType.StoredProcedure };
-                    comando.Parameters.Add("@ID_COSTURA", SqlDbType.Int).Value = costura.id_costura;
+                    comando.Parameters.Add("@ID_COSTURA", SqlDbType.Int).Value = actualiza.id_prueba_costura;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = actualiza.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = costura.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = costura.fecha;
@@ -322,62 +286,85 @@ namespace Datos.Diseno
                     comando.Parameters.Add("@COSTURA_RASGADO", SqlDbType.NVarChar).Value = costura.rasgado;
                     comando.Parameters.Add("@COSTURA_RASGADO_OBSERVACIONES", SqlDbType.NVarChar).Value = costura.rasgadoobservaciones;
                     cn.Open();
-                    SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
-                    while (rd.Read())
-                    {
-                        lstcostura.Add(new EPruebaCostura
-                        {
-                            id_costura = DBNull.Value.Equals(rd["id_costura"]) ? 0 : Convert.ToInt32(rd["id_costura"]),
-
-                        });
-                    }
+                    comando.ExecuteNonQuery();
 
                 }
 
-                foreach (EPruebaCostura itm in lstcostura)
-                {
-                    valoridlavadocostura = itm.id_costura;// se obtiene el id insertado para utilizarlo en el encabezado del registro
-                }
 
 
 
                 //proceso para insertar contaminacion combinacion  de telas
 
 
-                List<EPruebaContaminacion> lstcontaminacion = new List<EPruebaContaminacion>();
-
                 using (SqlConnection cn = DConexion.obtenerConexion()) //proceso para actualizar tabla prueba de diseno_telas_prueba_contaminacion 
-                { 
+                {
                     SqlCommand comando = new SqlCommand("diseno_calidad_prueba_contaminacion_actualizar", cn) { CommandType = CommandType.StoredProcedure };
-                    comando.Parameters.Add("@ID_CONTAMINACION", SqlDbType.Int).Value = contaminacion.id_tela;
+                    comando.Parameters.Add("@ID_CONTAMINACION", SqlDbType.Int).Value = actualiza.id_prueba_contaminacion_telas;
                     comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = actualiza.id_tela;
                     comando.Parameters.Add("@ID_OPERARIO", SqlDbType.Int).Value = contaminacion.id_operario;
                     comando.Parameters.Add("@FECHA", SqlDbType.SmallDateTime).Value = contaminacion.fecha;
                     comando.Parameters.Add("@CONTAMINACION", SqlDbType.NVarChar).Value = contaminacion.contaminacion;
                     comando.Parameters.Add("@OBSERVACIONES", SqlDbType.NVarChar).Value = contaminacion.observaciones;
                     cn.Open();
-                    SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
-                    while (rd.Read())
-                    {
-                        lstcontaminacion.Add(new EPruebaContaminacion
-                        {
-                            id_contaminacion = DBNull.Value.Equals(rd["id_contaminacion"]) ? 0 : Convert.ToInt32(rd["id_contaminacion"]),
-
-                        });
-                    }
-
+                    comando.ExecuteNonQuery();
                 }
 
-                foreach (EPruebaContaminacion itm in lstcontaminacion)
-                {
-                    valoridlavadocostura = itm.id_contaminacion;// se obtiene el id insertado para utilizarlo en el encabezado del registro
-                }
 
                 return 1;
             }
             catch (Exception)
             {
                 return 0;
+            }
+        }
+
+        public static List<ERegistroTelasCalidad> GetConsultaConregistroCalidad(ETelas inserta)
+        {
+            List<ERegistroTelasCalidad> lst = new List<ERegistroTelasCalidad>();
+            List<EPruebaEncogimiento> lstencogimiento = new List<EPruebaEncogimiento>();
+            List<EPruebaLavadoPilling> lstlavado = new List<EPruebaLavadoPilling>();
+            List<EPruebaCostura> lstcostura = new List<EPruebaCostura>();
+            List<EPruebaContaminacion> lstcontaminacion = new List<EPruebaContaminacion>();
+            EPruebaEncogimiento objencogimiento = new EPruebaEncogimiento();
+            EPruebaLavadoPilling objlavado = new EPruebaLavadoPilling();
+            EPruebaCostura objcostura = new EPruebaCostura();
+            EPruebaContaminacion objcontaminacion = new EPruebaContaminacion(); 
+            try
+            {
+                using (SqlConnection cn = DConexion.obtenerConexion())
+                {
+                    SqlCommand comando = new SqlCommand("diseno_calidad_prueba_calidad_consultaexist", cn) { CommandType = CommandType.StoredProcedure };
+                    comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = inserta.id_tela;
+                    cn.Open();
+                    SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
+                    while (rd.Read())
+                    {
+                        lst.Add(new ERegistroTelasCalidad
+                        {
+                            id_tela = DBNull.Value.Equals(rd["id_tela"]) ? 0 : Convert.ToInt32(rd["id_tela"]),
+                            id_prueba_encogimiento = Convert.ToInt32(rd["id_prueba_encogimiento"]),
+                            id_prueba_lavado_pilling = Convert.ToInt32(rd["id_prueba_lavado_pilling"]),
+                            id_prueba_costura = Convert.ToInt32(rd["id_prueba_costura"]),
+                            id_prueba_contaminacion_telas = Convert.ToInt32(rd["id_prueba_contaminacion_telas"]),
+
+                        });
+                    }
+
+                }
+                foreach(ERegistroTelasCalidad itm in lst)
+                {
+                    itm.encogimiento = objencogimiento;
+                    itm.lavadoPilling = objlavado;
+                    itm.costura = objcostura;
+                    itm.contaminacion = objcontaminacion;
+                    break;
+                }
+                return lst;
+            }
+            catch (Exception e)
+            {
+                string error = e.InnerException.ToString();
+                return new List<ERegistroTelasCalidad>();
             }
         }
 

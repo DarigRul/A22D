@@ -32,11 +32,9 @@
             this.reflectionImage3 = new DevComponents.DotNetBar.Controls.ReflectionImage();
             this.reflectionImage2 = new DevComponents.DotNetBar.Controls.ReflectionImage();
             this.reflectionImage1 = new DevComponents.DotNetBar.Controls.ReflectionImage();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.lblClaveProspecto = new DevComponents.DotNetBar.LabelX();
             this.lblClaveProveedor = new DevComponents.DotNetBar.LabelX();
             this.lblProveedor = new DevComponents.DotNetBar.LabelX();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
@@ -44,9 +42,20 @@
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.lblDescripcion = new DevComponents.DotNetBar.LabelX();
-            this.lblNombre = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.tcCalidad = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.txtContaminacionObservaciones = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.line6 = new DevComponents.DotNetBar.Controls.Line();
+            this.dtiContaminacionFecha = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.cmbContaminacionCalidad = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbContaminacionEntretela = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX56 = new DevComponents.DotNetBar.LabelX();
+            this.labelX55 = new DevComponents.DotNetBar.LabelX();
+            this.labelX52 = new DevComponents.DotNetBar.LabelX();
+            this.labelX54 = new DevComponents.DotNetBar.LabelX();
+            this.cmbContaminacionOperario = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX53 = new DevComponents.DotNetBar.LabelX();
+            this.tiContaminacion = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.line3 = new DevComponents.DotNetBar.Controls.Line();
             this.gpoPlancha = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -157,25 +166,14 @@
             this.labelX38 = new DevComponents.DotNetBar.LabelX();
             this.labelX37 = new DevComponents.DotNetBar.LabelX();
             this.tiLavado = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.txtContaminacionObservaciones = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.line6 = new DevComponents.DotNetBar.Controls.Line();
-            this.dtiContaminacionFecha = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.cmbContaminacionCalidad = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cmbContaminacionEntretela = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX56 = new DevComponents.DotNetBar.LabelX();
-            this.labelX55 = new DevComponents.DotNetBar.LabelX();
-            this.labelX52 = new DevComponents.DotNetBar.LabelX();
-            this.labelX54 = new DevComponents.DotNetBar.LabelX();
-            this.cmbContaminacionOperario = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX53 = new DevComponents.DotNetBar.LabelX();
-            this.tiContaminacion = new DevComponents.DotNetBar.SuperTabItem();
             this.btnAceptar = new DevComponents.DotNetBar.ButtonX();
             this.btnCancelar = new DevComponents.DotNetBar.ButtonX();
             this.plBotones = new DevComponents.DotNetBar.PanelEx();
             this.plForro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tcCalidad)).BeginInit();
             this.tcCalidad.SuspendLayout();
+            this.superTabControlPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtiContaminacionFecha)).BeginInit();
             this.superTabControlPanel1.SuspendLayout();
             this.gpoPlancha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanchaTramaDiferencia)).BeginInit();
@@ -210,8 +208,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLavadoHiloDiferencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLavadoTramaFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLavadoHiloFinal)).BeginInit();
-            this.superTabControlPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtiContaminacionFecha)).BeginInit();
             this.plBotones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -222,11 +218,9 @@
             this.plForro.Controls.Add(this.reflectionImage3);
             this.plForro.Controls.Add(this.reflectionImage2);
             this.plForro.Controls.Add(this.reflectionImage1);
-            this.plForro.Controls.Add(this.labelX5);
             this.plForro.Controls.Add(this.labelX4);
             this.plForro.Controls.Add(this.labelX3);
             this.plForro.Controls.Add(this.labelX2);
-            this.plForro.Controls.Add(this.lblClaveProspecto);
             this.plForro.Controls.Add(this.lblClaveProveedor);
             this.plForro.Controls.Add(this.lblProveedor);
             this.plForro.Controls.Add(this.labelX14);
@@ -234,8 +228,6 @@
             this.plForro.Controls.Add(this.labelX12);
             this.plForro.Controls.Add(this.labelX11);
             this.plForro.Controls.Add(this.lblDescripcion);
-            this.plForro.Controls.Add(this.lblNombre);
-            this.plForro.Controls.Add(this.labelX1);
             this.plForro.DisabledBackColor = System.Drawing.Color.Empty;
             this.plForro.Dock = System.Windows.Forms.DockStyle.Top;
             this.plForro.Location = new System.Drawing.Point(0, 0);
@@ -288,25 +280,13 @@
             this.reflectionImage1.Size = new System.Drawing.Size(20, 20);
             this.reflectionImage1.TabIndex = 1;
             // 
-            // labelX5
-            // 
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(542, 12);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(93, 23);
-            this.labelX5.TabIndex = 0;
-            this.labelX5.Text = "Clave prospecto: ";
-            // 
             // labelX4
             // 
             // 
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(268, 41);
+            this.labelX4.Location = new System.Drawing.Point(478, 10);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(93, 23);
             this.labelX4.TabIndex = 0;
@@ -318,9 +298,9 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(268, 12);
+            this.labelX3.Location = new System.Drawing.Point(233, 10);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(93, 23);
+            this.labelX3.Size = new System.Drawing.Size(64, 23);
             this.labelX3.TabIndex = 0;
             this.labelX3.Text = "Proveedor: ";
             // 
@@ -330,23 +310,11 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(12, 41);
+            this.labelX2.Location = new System.Drawing.Point(12, 10);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(41, 23);
             this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "Descripción: ";
-            // 
-            // lblClaveProspecto
-            // 
-            // 
-            // 
-            // 
-            this.lblClaveProspecto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblClaveProspecto.Location = new System.Drawing.Point(641, 12);
-            this.lblClaveProspecto.Name = "lblClaveProspecto";
-            this.lblClaveProspecto.Size = new System.Drawing.Size(169, 23);
-            this.lblClaveProspecto.TabIndex = 0;
-            this.lblClaveProspecto.Text = "Nombre: ";
+            this.labelX2.Text = "Tela:";
             // 
             // lblClaveProveedor
             // 
@@ -354,7 +322,7 @@
             // 
             // 
             this.lblClaveProveedor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblClaveProveedor.Location = new System.Drawing.Point(367, 41);
+            this.lblClaveProveedor.Location = new System.Drawing.Point(587, 10);
             this.lblClaveProveedor.Name = "lblClaveProveedor";
             this.lblClaveProveedor.Size = new System.Drawing.Size(169, 23);
             this.lblClaveProveedor.TabIndex = 0;
@@ -366,9 +334,9 @@
             // 
             // 
             this.lblProveedor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblProveedor.Location = new System.Drawing.Point(367, 12);
+            this.lblProveedor.Location = new System.Drawing.Point(303, 10);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(169, 23);
+            this.lblProveedor.Size = new System.Drawing.Size(143, 23);
             this.lblProveedor.TabIndex = 0;
             this.lblProveedor.Text = "Nombre: ";
             // 
@@ -430,35 +398,11 @@
             // 
             // 
             this.lblDescripcion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblDescripcion.Location = new System.Drawing.Point(93, 41);
+            this.lblDescripcion.Location = new System.Drawing.Point(59, 10);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(169, 23);
+            this.lblDescripcion.Size = new System.Drawing.Size(177, 23);
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "Nombre: ";
-            // 
-            // lblNombre
-            // 
-            // 
-            // 
-            // 
-            this.lblNombre.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblNombre.Location = new System.Drawing.Point(93, 12);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(169, 23);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre: ";
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(12, 12);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Nombre: ";
             // 
             // tcCalidad
             // 
@@ -479,9 +423,9 @@
             this.tcCalidad.ControlBox.MenuBox,
             this.tcCalidad.ControlBox.CloseBox});
             this.tcCalidad.Controls.Add(this.superTabControlPanel4);
-            this.tcCalidad.Controls.Add(this.superTabControlPanel1);
             this.tcCalidad.Controls.Add(this.superTabControlPanel3);
             this.tcCalidad.Controls.Add(this.superTabControlPanel2);
+            this.tcCalidad.Controls.Add(this.superTabControlPanel1);
             this.tcCalidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcCalidad.ForeColor = System.Drawing.Color.Black;
             this.tcCalidad.Location = new System.Drawing.Point(0, 139);
@@ -500,6 +444,206 @@
             this.tiContaminacion});
             this.tcCalidad.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.VisualStudio2008Dock;
             this.tcCalidad.Text = "superTabControl1";
+            // 
+            // superTabControlPanel4
+            // 
+            this.superTabControlPanel4.Controls.Add(this.txtContaminacionObservaciones);
+            this.superTabControlPanel4.Controls.Add(this.line6);
+            this.superTabControlPanel4.Controls.Add(this.dtiContaminacionFecha);
+            this.superTabControlPanel4.Controls.Add(this.cmbContaminacionCalidad);
+            this.superTabControlPanel4.Controls.Add(this.cmbContaminacionEntretela);
+            this.superTabControlPanel4.Controls.Add(this.labelX56);
+            this.superTabControlPanel4.Controls.Add(this.labelX55);
+            this.superTabControlPanel4.Controls.Add(this.labelX52);
+            this.superTabControlPanel4.Controls.Add(this.labelX54);
+            this.superTabControlPanel4.Controls.Add(this.cmbContaminacionOperario);
+            this.superTabControlPanel4.Controls.Add(this.labelX53);
+            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel4.Name = "superTabControlPanel4";
+            this.superTabControlPanel4.Size = new System.Drawing.Size(959, 482);
+            this.superTabControlPanel4.TabIndex = 4;
+            this.superTabControlPanel4.TabItem = this.tiContaminacion;
+            // 
+            // txtContaminacionObservaciones
+            // 
+            this.txtContaminacionObservaciones.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtContaminacionObservaciones.Border.Class = "TextBoxBorder";
+            this.txtContaminacionObservaciones.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtContaminacionObservaciones.DisabledBackColor = System.Drawing.Color.White;
+            this.txtContaminacionObservaciones.ForeColor = System.Drawing.Color.Black;
+            this.txtContaminacionObservaciones.Location = new System.Drawing.Point(3, 160);
+            this.txtContaminacionObservaciones.Multiline = true;
+            this.txtContaminacionObservaciones.Name = "txtContaminacionObservaciones";
+            this.txtContaminacionObservaciones.PreventEnterBeep = true;
+            this.txtContaminacionObservaciones.Size = new System.Drawing.Size(468, 95);
+            this.txtContaminacionObservaciones.TabIndex = 18;
+            // 
+            // line6
+            // 
+            this.line6.Location = new System.Drawing.Point(12, 47);
+            this.line6.Name = "line6";
+            this.line6.Size = new System.Drawing.Size(935, 23);
+            this.line6.TabIndex = 17;
+            this.line6.Text = "line6";
+            // 
+            // dtiContaminacionFecha
+            // 
+            // 
+            // 
+            // 
+            this.dtiContaminacionFecha.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtiContaminacionFecha.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtiContaminacionFecha.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dtiContaminacionFecha.ButtonDropDown.Visible = true;
+            this.dtiContaminacionFecha.Format = DevComponents.Editors.eDateTimePickerFormat.Long;
+            this.dtiContaminacionFecha.IsPopupCalendarOpen = false;
+            this.dtiContaminacionFecha.Location = new System.Drawing.Point(542, 19);
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.dtiContaminacionFecha.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtiContaminacionFecha.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dtiContaminacionFecha.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtiContaminacionFecha.MonthCalendar.DisplayMonth = new System.DateTime(2022, 4, 1, 0, 0, 0, 0);
+            // 
+            // 
+            // 
+            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtiContaminacionFecha.MonthCalendar.TodayButtonVisible = true;
+            this.dtiContaminacionFecha.Name = "dtiContaminacionFecha";
+            this.dtiContaminacionFecha.Size = new System.Drawing.Size(280, 20);
+            this.dtiContaminacionFecha.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dtiContaminacionFecha.TabIndex = 16;
+            // 
+            // cmbContaminacionCalidad
+            // 
+            this.cmbContaminacionCalidad.DisplayMember = "Text";
+            this.cmbContaminacionCalidad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbContaminacionCalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContaminacionCalidad.ForeColor = System.Drawing.Color.Black;
+            this.cmbContaminacionCalidad.FormattingEnabled = true;
+            this.cmbContaminacionCalidad.ItemHeight = 15;
+            this.cmbContaminacionCalidad.Location = new System.Drawing.Point(71, 84);
+            this.cmbContaminacionCalidad.Name = "cmbContaminacionCalidad";
+            this.cmbContaminacionCalidad.Size = new System.Drawing.Size(137, 21);
+            this.cmbContaminacionCalidad.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbContaminacionCalidad.TabIndex = 15;
+            // 
+            // cmbContaminacionEntretela
+            // 
+            this.cmbContaminacionEntretela.DisplayMember = "Text";
+            this.cmbContaminacionEntretela.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbContaminacionEntretela.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContaminacionEntretela.Enabled = false;
+            this.cmbContaminacionEntretela.ForeColor = System.Drawing.Color.Black;
+            this.cmbContaminacionEntretela.FormattingEnabled = true;
+            this.cmbContaminacionEntretela.ItemHeight = 15;
+            this.cmbContaminacionEntretela.Location = new System.Drawing.Point(71, 19);
+            this.cmbContaminacionEntretela.Name = "cmbContaminacionEntretela";
+            this.cmbContaminacionEntretela.Size = new System.Drawing.Size(137, 21);
+            this.cmbContaminacionEntretela.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbContaminacionEntretela.TabIndex = 15;
+            // 
+            // labelX56
+            // 
+            // 
+            // 
+            // 
+            this.labelX56.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX56.Location = new System.Drawing.Point(12, 131);
+            this.labelX56.Name = "labelX56";
+            this.labelX56.Size = new System.Drawing.Size(85, 23);
+            this.labelX56.TabIndex = 13;
+            this.labelX56.Text = "Observaciones: ";
+            // 
+            // labelX55
+            // 
+            // 
+            // 
+            // 
+            this.labelX55.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX55.Location = new System.Drawing.Point(12, 84);
+            this.labelX55.Name = "labelX55";
+            this.labelX55.Size = new System.Drawing.Size(53, 23);
+            this.labelX55.TabIndex = 13;
+            this.labelX55.Text = "Calidad: ";
+            // 
+            // labelX52
+            // 
+            // 
+            // 
+            // 
+            this.labelX52.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX52.Location = new System.Drawing.Point(12, 18);
+            this.labelX52.Name = "labelX52";
+            this.labelX52.Size = new System.Drawing.Size(53, 23);
+            this.labelX52.TabIndex = 13;
+            this.labelX52.Text = "Tela:";
+            // 
+            // labelX54
+            // 
+            // 
+            // 
+            // 
+            this.labelX54.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX54.Location = new System.Drawing.Point(490, 18);
+            this.labelX54.Name = "labelX54";
+            this.labelX54.Size = new System.Drawing.Size(46, 23);
+            this.labelX54.TabIndex = 11;
+            this.labelX54.Text = "Fecha:";
+            // 
+            // cmbContaminacionOperario
+            // 
+            this.cmbContaminacionOperario.DisplayMember = "Text";
+            this.cmbContaminacionOperario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbContaminacionOperario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContaminacionOperario.ForeColor = System.Drawing.Color.Black;
+            this.cmbContaminacionOperario.FormattingEnabled = true;
+            this.cmbContaminacionOperario.ItemHeight = 15;
+            this.cmbContaminacionOperario.Location = new System.Drawing.Point(280, 19);
+            this.cmbContaminacionOperario.Name = "cmbContaminacionOperario";
+            this.cmbContaminacionOperario.Size = new System.Drawing.Size(200, 21);
+            this.cmbContaminacionOperario.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbContaminacionOperario.TabIndex = 14;
+            // 
+            // labelX53
+            // 
+            // 
+            // 
+            // 
+            this.labelX53.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX53.Location = new System.Drawing.Point(214, 18);
+            this.labelX53.Name = "labelX53";
+            this.labelX53.Size = new System.Drawing.Size(60, 23);
+            this.labelX53.TabIndex = 12;
+            this.labelX53.Text = "Operario: ";
+            // 
+            // tiContaminacion
+            // 
+            this.tiContaminacion.AttachedControl = this.superTabControlPanel4;
+            this.tiContaminacion.GlobalItem = false;
+            this.tiContaminacion.Name = "tiContaminacion";
+            this.tiContaminacion.Text = "Contaminación en combinación de telas";
             // 
             // superTabControlPanel1
             // 
@@ -1303,6 +1447,7 @@
             this.cmbTelaEncogimiento.DisplayMember = "Text";
             this.cmbTelaEncogimiento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbTelaEncogimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTelaEncogimiento.Enabled = false;
             this.cmbTelaEncogimiento.ForeColor = System.Drawing.Color.Black;
             this.cmbTelaEncogimiento.FormattingEnabled = true;
             this.cmbTelaEncogimiento.ItemHeight = 15;
@@ -1681,6 +1826,7 @@
             this.cmbCosturaEntretela.DisplayMember = "Text";
             this.cmbCosturaEntretela.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbCosturaEntretela.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCosturaEntretela.Enabled = false;
             this.cmbCosturaEntretela.ForeColor = System.Drawing.Color.Black;
             this.cmbCosturaEntretela.FormattingEnabled = true;
             this.cmbCosturaEntretela.ItemHeight = 15;
@@ -2227,6 +2373,7 @@
             this.cmbLavadoEntretela.DisplayMember = "Text";
             this.cmbLavadoEntretela.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbLavadoEntretela.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLavadoEntretela.Enabled = false;
             this.cmbLavadoEntretela.ForeColor = System.Drawing.Color.Black;
             this.cmbLavadoEntretela.FormattingEnabled = true;
             this.cmbLavadoEntretela.ItemHeight = 15;
@@ -2266,205 +2413,6 @@
             this.tiLavado.GlobalItem = false;
             this.tiLavado.Name = "tiLavado";
             this.tiLavado.Text = "Lavado y Pilling";
-            // 
-            // superTabControlPanel4
-            // 
-            this.superTabControlPanel4.Controls.Add(this.txtContaminacionObservaciones);
-            this.superTabControlPanel4.Controls.Add(this.line6);
-            this.superTabControlPanel4.Controls.Add(this.dtiContaminacionFecha);
-            this.superTabControlPanel4.Controls.Add(this.cmbContaminacionCalidad);
-            this.superTabControlPanel4.Controls.Add(this.cmbContaminacionEntretela);
-            this.superTabControlPanel4.Controls.Add(this.labelX56);
-            this.superTabControlPanel4.Controls.Add(this.labelX55);
-            this.superTabControlPanel4.Controls.Add(this.labelX52);
-            this.superTabControlPanel4.Controls.Add(this.labelX54);
-            this.superTabControlPanel4.Controls.Add(this.cmbContaminacionOperario);
-            this.superTabControlPanel4.Controls.Add(this.labelX53);
-            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel4.Name = "superTabControlPanel4";
-            this.superTabControlPanel4.Size = new System.Drawing.Size(959, 482);
-            this.superTabControlPanel4.TabIndex = 4;
-            this.superTabControlPanel4.TabItem = this.tiContaminacion;
-            // 
-            // txtContaminacionObservaciones
-            // 
-            this.txtContaminacionObservaciones.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtContaminacionObservaciones.Border.Class = "TextBoxBorder";
-            this.txtContaminacionObservaciones.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtContaminacionObservaciones.DisabledBackColor = System.Drawing.Color.White;
-            this.txtContaminacionObservaciones.ForeColor = System.Drawing.Color.Black;
-            this.txtContaminacionObservaciones.Location = new System.Drawing.Point(3, 160);
-            this.txtContaminacionObservaciones.Multiline = true;
-            this.txtContaminacionObservaciones.Name = "txtContaminacionObservaciones";
-            this.txtContaminacionObservaciones.PreventEnterBeep = true;
-            this.txtContaminacionObservaciones.Size = new System.Drawing.Size(468, 95);
-            this.txtContaminacionObservaciones.TabIndex = 18;
-            // 
-            // line6
-            // 
-            this.line6.Location = new System.Drawing.Point(12, 47);
-            this.line6.Name = "line6";
-            this.line6.Size = new System.Drawing.Size(935, 23);
-            this.line6.TabIndex = 17;
-            this.line6.Text = "line6";
-            // 
-            // dtiContaminacionFecha
-            // 
-            // 
-            // 
-            // 
-            this.dtiContaminacionFecha.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dtiContaminacionFecha.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiContaminacionFecha.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dtiContaminacionFecha.ButtonDropDown.Visible = true;
-            this.dtiContaminacionFecha.Format = DevComponents.Editors.eDateTimePickerFormat.Long;
-            this.dtiContaminacionFecha.IsPopupCalendarOpen = false;
-            this.dtiContaminacionFecha.Location = new System.Drawing.Point(542, 19);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.dtiContaminacionFecha.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiContaminacionFecha.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dtiContaminacionFecha.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dtiContaminacionFecha.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiContaminacionFecha.MonthCalendar.DisplayMonth = new System.DateTime(2022, 4, 1, 0, 0, 0, 0);
-            // 
-            // 
-            // 
-            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dtiContaminacionFecha.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiContaminacionFecha.MonthCalendar.TodayButtonVisible = true;
-            this.dtiContaminacionFecha.Name = "dtiContaminacionFecha";
-            this.dtiContaminacionFecha.Size = new System.Drawing.Size(280, 20);
-            this.dtiContaminacionFecha.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtiContaminacionFecha.TabIndex = 16;
-            // 
-            // cmbContaminacionCalidad
-            // 
-            this.cmbContaminacionCalidad.DisplayMember = "Text";
-            this.cmbContaminacionCalidad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbContaminacionCalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbContaminacionCalidad.ForeColor = System.Drawing.Color.Black;
-            this.cmbContaminacionCalidad.FormattingEnabled = true;
-            this.cmbContaminacionCalidad.ItemHeight = 15;
-            this.cmbContaminacionCalidad.Location = new System.Drawing.Point(71, 84);
-            this.cmbContaminacionCalidad.Name = "cmbContaminacionCalidad";
-            this.cmbContaminacionCalidad.Size = new System.Drawing.Size(137, 21);
-            this.cmbContaminacionCalidad.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbContaminacionCalidad.TabIndex = 15;
-            // 
-            // cmbContaminacionEntretela
-            // 
-            this.cmbContaminacionEntretela.DisplayMember = "Text";
-            this.cmbContaminacionEntretela.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbContaminacionEntretela.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbContaminacionEntretela.ForeColor = System.Drawing.Color.Black;
-            this.cmbContaminacionEntretela.FormattingEnabled = true;
-            this.cmbContaminacionEntretela.ItemHeight = 15;
-            this.cmbContaminacionEntretela.Location = new System.Drawing.Point(71, 19);
-            this.cmbContaminacionEntretela.Name = "cmbContaminacionEntretela";
-            this.cmbContaminacionEntretela.Size = new System.Drawing.Size(137, 21);
-            this.cmbContaminacionEntretela.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbContaminacionEntretela.TabIndex = 15;
-            // 
-            // labelX56
-            // 
-            // 
-            // 
-            // 
-            this.labelX56.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX56.Location = new System.Drawing.Point(12, 131);
-            this.labelX56.Name = "labelX56";
-            this.labelX56.Size = new System.Drawing.Size(85, 23);
-            this.labelX56.TabIndex = 13;
-            this.labelX56.Text = "Observaciones: ";
-            // 
-            // labelX55
-            // 
-            // 
-            // 
-            // 
-            this.labelX55.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX55.Location = new System.Drawing.Point(12, 84);
-            this.labelX55.Name = "labelX55";
-            this.labelX55.Size = new System.Drawing.Size(53, 23);
-            this.labelX55.TabIndex = 13;
-            this.labelX55.Text = "Calidad: ";
-            // 
-            // labelX52
-            // 
-            // 
-            // 
-            // 
-            this.labelX52.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX52.Location = new System.Drawing.Point(12, 18);
-            this.labelX52.Name = "labelX52";
-            this.labelX52.Size = new System.Drawing.Size(53, 23);
-            this.labelX52.TabIndex = 13;
-            this.labelX52.Text = "Tela:";
-            // 
-            // labelX54
-            // 
-            // 
-            // 
-            // 
-            this.labelX54.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX54.Location = new System.Drawing.Point(490, 18);
-            this.labelX54.Name = "labelX54";
-            this.labelX54.Size = new System.Drawing.Size(46, 23);
-            this.labelX54.TabIndex = 11;
-            this.labelX54.Text = "Fecha:";
-            // 
-            // cmbContaminacionOperario
-            // 
-            this.cmbContaminacionOperario.DisplayMember = "Text";
-            this.cmbContaminacionOperario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbContaminacionOperario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbContaminacionOperario.ForeColor = System.Drawing.Color.Black;
-            this.cmbContaminacionOperario.FormattingEnabled = true;
-            this.cmbContaminacionOperario.ItemHeight = 15;
-            this.cmbContaminacionOperario.Location = new System.Drawing.Point(280, 19);
-            this.cmbContaminacionOperario.Name = "cmbContaminacionOperario";
-            this.cmbContaminacionOperario.Size = new System.Drawing.Size(200, 21);
-            this.cmbContaminacionOperario.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbContaminacionOperario.TabIndex = 14;
-            // 
-            // labelX53
-            // 
-            // 
-            // 
-            // 
-            this.labelX53.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX53.Location = new System.Drawing.Point(214, 18);
-            this.labelX53.Name = "labelX53";
-            this.labelX53.Size = new System.Drawing.Size(60, 23);
-            this.labelX53.TabIndex = 12;
-            this.labelX53.Text = "Operario: ";
-            // 
-            // tiContaminacion
-            // 
-            this.tiContaminacion.AttachedControl = this.superTabControlPanel4;
-            this.tiContaminacion.GlobalItem = false;
-            this.tiContaminacion.Name = "tiContaminacion";
-            this.tiContaminacion.Text = "Contaminación en combinación de telas";
             // 
             // btnAceptar
             // 
@@ -2532,6 +2480,8 @@
             this.plForro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tcCalidad)).EndInit();
             this.tcCalidad.ResumeLayout(false);
+            this.superTabControlPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtiContaminacionFecha)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
             this.gpoPlancha.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanchaTramaDiferencia)).EndInit();
@@ -2566,8 +2516,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLavadoHiloDiferencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLavadoTramaFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLavadoHiloFinal)).EndInit();
-            this.superTabControlPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtiContaminacionFecha)).EndInit();
             this.plBotones.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2585,15 +2533,12 @@
         private DevComponents.DotNetBar.SuperTabItem tiCostura;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel2;
         private DevComponents.DotNetBar.SuperTabItem tiLavado;
-        private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage3;
         private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage2;
         private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage1;
-        private DevComponents.DotNetBar.LabelX lblClaveProspecto;
         private DevComponents.DotNetBar.LabelX lblClaveProveedor;
         private DevComponents.DotNetBar.LabelX lblProveedor;
         private DevComponents.DotNetBar.LabelX labelX14;
@@ -2601,7 +2546,6 @@
         private DevComponents.DotNetBar.LabelX labelX12;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX lblDescripcion;
-        private DevComponents.DotNetBar.LabelX lblNombre;
         private DevComponents.DotNetBar.LabelX labelX10;
         private DevComponents.DotNetBar.LabelX labelX9;
         private DevComponents.DotNetBar.LabelX labelX8;

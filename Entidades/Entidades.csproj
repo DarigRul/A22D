@@ -52,6 +52,7 @@
     <Compile Include="Diseno\Calidad\EPruebaCostura.cs" />
     <Compile Include="Diseno\Calidad\EPruebaEncogimiento.cs" />
     <Compile Include="Diseno\Calidad\EPruebaLavadoPilling.cs" />
+    <Compile Include="Diseno\Calidad\ERegistroTelasCalidad.cs" />
     <Compile Include="Diseno\Calidad\EResultadoPillingcombo.cs" />
     <Compile Include="Diseno\EColor.cs" />
     <Compile Include="Diseno\EComposicion.cs" />
