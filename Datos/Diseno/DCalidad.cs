@@ -328,7 +328,7 @@ namespace Datos.Diseno
             EPruebaEncogimiento objencogimiento = new EPruebaEncogimiento();
             EPruebaLavadoPilling objlavado = new EPruebaLavadoPilling();
             EPruebaCostura objcostura = new EPruebaCostura();
-            EPruebaContaminacion objcontaminacion = new EPruebaContaminacion(); 
+            EPruebaContaminacion objcontaminacion = new EPruebaContaminacion();
             try
             {
                 using (SqlConnection cn = DConexion.obtenerConexion())
@@ -351,7 +351,7 @@ namespace Datos.Diseno
                     }
 
                 }
-                foreach(ERegistroTelasCalidad itm in lst)
+                foreach (ERegistroTelasCalidad itm in lst)
                 {
                     itm.encogimiento = objencogimiento;
                     itm.lavadoPilling = objlavado;
@@ -523,6 +523,65 @@ namespace Datos.Diseno
                 string s = e.InnerException.ToString();
                 return new List<EResultadoPillingcombo>();
             }
+        }
+
+        public static EPruebaEncogimiento GetCompletarInformacionEncogimiento_PruebaCalidad(int id_tela, int id_encogimiento)
+        {
+            EPruebaEncogimiento resultado = new EPruebaEncogimiento();
+            List<EPruebaEncogimiento> lstpruebaencogimiento = new List<EPruebaEncogimiento>();
+            using (SqlConnection cn = DConexion.obtenerConexion()) // proceso para insercion tabla diseno_forros_prueba_encogimiento
+            {
+                SqlCommand comando = new SqlCommand("", cn) { CommandType = CommandType.StoredProcedure };
+                comando.Parameters.Add("@ID_TELA", SqlDbType.Int).Value = id_tela;
+                comando.Parameters.Add("@ID_ENCOGIMIENTO", SqlDbType.Int).Value = id_encogimiento;
+
+                cn.Open();
+                SqlDataReader rd = comando.ExecuteReader(CommandBehavior.SingleResult);
+                while (rd.Read())
+                {
+                    lstpruebaencogimiento.Add(new EPruebaEncogimiento
+                    {
+                        id_encogimiento = DBNull.Value.Equals(rd["id_prueba_encogimiento"]) ? 0 : Convert.ToInt32(rd["id_prueba_encogimiento"]),
+                        id_tela = Convert.ToInt32(rd["id_tela"]),
+
+                        id_operario = Convert.ToInt32(rd["id_operario"]),
+                        fecha_hora = Convert.ToDateTime(rd["fecha_hora"]),
+                        id_entretela = Convert.ToInt32(rd["id_entretela"]),
+                        adherencia = Convert.ToDouble(rd["adherencia"]),
+                        id_proveedor = Convert.ToInt32(rd["id_proveedor"]),
+                        temperatura = Convert.ToDouble(rd["temperatura"]),
+                        tiempo = Convert.ToInt32(rd["tiempo"]),
+                        presion = Convert.ToDouble(rd["presion"]),
+                        vapor_hilo_final = Convert.ToDouble(rd["vapor_hilo_final"]),
+                        vapor_trama_final = Convert.ToDouble(rd["vapor_trama_final"]),
+                        vapor_hilo_diferencia = Convert.ToDouble(rd["vapor_hilo_diferencia"]),
+                        vapor_trama_diferencia = Convert.ToDouble(rd["vapor_trama_diferencia"]),
+
+
+                        vapor_observaciones = Convert.ToString(rd["vapor_observaciones"]),
+                        fusion_hilo_final = Convert.ToDouble(rd["fusion_hilo_final"]),
+                        fusion_trama_final = Convert.ToDouble(rd["fusion_trama_final"]),
+                        fusion_hilo_diferencia = Convert.ToDouble(rd["fusion_hilo_diferencia"]),
+                        fusion_trama_diferencia = Convert.ToDouble(rd["fusion_trama_diferencia"]),
+                        fusion_observaciones = Convert.ToString(rd["fusion_observaciones"]),
+                        plancha_hilo_final = Convert.ToDouble(rd["plancha_hilo_final"]),
+
+                        plancha_trama_final = Convert.ToDouble(rd["plancha_trama_final"]),
+                        plancha_hilo_diferencia = Convert.ToDouble(rd["plancha_hilo_diferencia"]),
+                        plancha_trama_diferencia = Convert.ToDouble(rd["plancha_trama_diferencia"]),
+                        plancha_obvservaciones = Convert.ToString(rd["plancha_obvservaciones"]),
+
+
+                    });
+                }
+
+            }
+            foreach (EPruebaEncogimiento itm in lstpruebaencogimiento)
+            {
+                resultado = itm;// se obtiene el id insertado para utilizarlo en el encabezado del registro
+                break;
+            }
+            return new EPruebaEncogimiento();
         }
 
     }

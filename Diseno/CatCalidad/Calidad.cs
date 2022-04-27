@@ -620,7 +620,7 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                 }
 
             }
-            foreach(ETelas itm3 in lstcosturatela)
+            foreach (ETelas itm3 in lstcosturatela)
             {
                 telatab3 += 1;
                 if (itm3.id_tela == TelasGenarl.id_tela)
@@ -642,28 +642,28 @@ namespace ALTIMA_ERP_2022.Diseno.CatCalidad
                 List<ERegistroTelasCalidad> lst = new List<ERegistroTelasCalidad>();
                 ERegistroTelasCalidad obj = new ERegistroTelasCalidad();
                 lst = DCalidad.GetConsultaConregistroCalidad(TelasGenarl);
-                foreach(ERegistroTelasCalidad itm in lst)
+                foreach (ERegistroTelasCalidad itm in lst)
                 {
                     obj.id_tela = itm.id_tela;
-                    obj.id_prueba_encogimiento = itm.id_prueba_encogimiento;    
+                    obj.id_prueba_encogimiento = itm.id_prueba_encogimiento;
                     obj.id_prueba_costura = itm.id_prueba_costura;
-                    obj.id_prueba_lavado_pilling = itm.id_prueba_lavado_pilling;    
-                    obj.id_prueba_contaminacion_telas=itm.id_prueba_contaminacion_telas;
+                    obj.id_prueba_lavado_pilling = itm.id_prueba_lavado_pilling;
+                    obj.id_prueba_contaminacion_telas = itm.id_prueba_contaminacion_telas;
                     obj.encogimiento = itm.encogimiento;
-                    obj.lavadoPilling = itm.lavadoPilling; 
-                    obj.costura=itm.costura;
+                    obj.lavadoPilling = itm.lavadoPilling;
+                    obj.costura = itm.costura;
                     obj.contaminacion = itm.contaminacion;
                     break;
                 }
-                txtVaporAdherencia.Text =Convert.ToString(obj.encogimiento.adherencia);
+                txtVaporAdherencia.Text = Convert.ToString(obj.encogimiento.adherencia);
 
             }
             else
             {
                 limpiartextbox();
-            }    
-            
-           
+            }
+
+
         }
 
         public void limpiartextbox()
